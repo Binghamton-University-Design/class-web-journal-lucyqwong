@@ -1,0 +1,52 @@
+.grid {
+  grid-gap: 1em;
+  margin: 0 0 2em 0;
+}
+
+.grid div {
+  background-color:rgba(0,0,0,0.1);
+}
+
+.nice-image {
+  width: 100%;
+  height: auto;
+}
+
+.book {
+  margin-top: 2em;
+}
+
+.book h2 {
+    font-family: 'Josefin Sans', sans-serif ;
+    font-weight: 400;
+    font-size: 2em;
+    font-color: #000000;
+}
+
+.book-nav {
+  text-align: center;
+  color: white;
+}
+
+.book-nav a {
+  background-color: transparent;
+}
+
+.book-nav img {
+  width: 70%;
+}
+
+.credits {
+  text-align: center;
+  color: white;
+}
+
+.body {
+  background-color: #ffffff;
+}
+
+.h1 {
+  color: white;
+  text-shadow: 2px 2px 5px white;
+}
+
