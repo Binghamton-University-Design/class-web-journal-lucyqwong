@@ -110,13 +110,12 @@ a {
   transition: color, background-color 0.333s ease-in-out;
   padding: 0 .5em;
   color: var(--link-color);
-  background-color: var(--alt-link-color);
   text-decoration: none;
 }
 
 a:hover {
     color: var(--alt-link-color) !important;
-    background-color: var(--link-color);
+    background-color: #F0DADC;
 }
 
 a:visited {
