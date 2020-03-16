@@ -180,6 +180,18 @@ a:visited {
   display: none;
 }
 
+.overlay a {
+  color: var(--background-color);
+  text-decoration: underline;
+  padding: 0;
+}
+
+.overlay a:hover {
+  color: var(--background-color) !important;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 .overlay-holder {
   position: relative;
   transition: opacity .5s ease-in-out, visibility .5s ease-in-out ;
