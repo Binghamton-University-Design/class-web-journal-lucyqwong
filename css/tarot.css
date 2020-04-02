@@ -1,0 +1,67 @@
+.grid {
+  grid-gap: 1em;
+  margin: 0 0 2em 0;
+}
+
+.grid div {
+  background-color:rgba(0,0,0,0);
+}
+
+.nice-image {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nice-imageR {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotate(180deg);
+}
+
+.book {
+  margin-top: 2em;
+}
+
+.book h2 {
+    font-family: 'Josefin Sans', sans-serif ;
+    font-weight: 400;
+    font-size: 2em;
+    font-color: #000000;
+}
+
+.book-nav {
+  text-align: center;
+  color: black;
+}
+
+.book-nav a {
+  background-color: transparent;
+}
+
+.book-nav img {
+  width: 70%;
+}
+
+.info {
+  text-align: center;
+  color: black;
+}
+
+.body {
+  background-color: #ffffff;
+}
+
+.h1 {
+  color: #000000;
+}
+
+.h4 a:hover {
+  color: #34113F;
+  background-color: #34113F;
+}

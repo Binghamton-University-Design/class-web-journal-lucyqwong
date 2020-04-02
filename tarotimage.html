@@ -1,0 +1,74 @@
+<!--
+this file has the code to display a random image from array upon page refresh
+	-->
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Daily Tarot Reading</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/grid-utils.css">
+		<link rel="stylesheet" href="css/Tstyle.css">
+		<link rel="stylesheet" href="css/tarot.css">
+
+
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <!--font is from google fonts-->
+		<script src="js/main.js"></script>
+
+	</head>
+
+	<body>
+		
+
+		<div id="masthead">
+			<h4><a href="http://lucyqwong.com/" style="background-color: transparent">Designed by Lucy Wong</a></h4>
+		</div>
+
+		<div class="wrapper">
+			<div class="grid book">
+			</div>
+
+			<div class="grid">
+				<div class="width-12-12-m width-12-12">
+					<div class="book-nav"><h1><a href="tarotimage.html">See another card</a></h1></div>
+				</div>
+
+
+				<div class="width-8-12-m width-8-12">
+					<div class="flex-content">
+					<img class="nice-image" id="randomImage" alt="Try again :("/>
+				<script>
+				function getRandomImage() {
+				var images = ['images/card_1.png','images/card_2.png','images/card_3.png','images/card_4.png','images/card_5.png','images/card_6.png','images/card_7.png','images/card_8.png','images/card_9.png','images/card_10.png','images/card_11.png','images/card_12.png','images/card_13.png','images/card_14.png','images/card_15.png','images/card_16.png','images/card_17.png','images/card_18.png','images/card_19.png','images/card_20.png','images/card_21.png','images/card_22.png','images/card_23.png','images/card_24.png','images/card_25.png','images/card_26.png','images/card_27.png','images/card_28.png','images/card_29.png','images/card_30.png','images/card_31.png','images/card_32.png','images/card_33.png','images/card_34.png','images/card_35.png','images/card_36.png','images/card_37.png','images/card_38.png','images/card_39.png','images/card_40.png','images/card_41.png','images/card_42.png','images/card_43.png','images/card_44.png','images/card_45.png','images/card_46.png','images/card_47.png','images/card_48.png','images/card_49.png','images/card_50.png','images/card_51.png','images/card_52.png','images/card_53.png','images/card_54.png','images/card_55.png','images/card_56.png','images/card_57.png','images/card_58.png','images/card_59.png','images/card_60.png','images/card_61.png','images/card_62.png','images/card_63.png','images/card_64.png','images/card_65.png','images/card_66.png','images/card_67.png','images/card_68.png','images/card_69.png','images/card_70.png','images/card_71.png','images/card_72.png','images/card_73.png','images/card_74.png','images/card_75.png','images/card_76.png','images/card_77.png','images/card_78.png',];
+				var image = images[Math.floor(Math.random()*images.length)];
+ 
+				return image;
+				}
+ 
+				function displayRandomImage() {
+				var htmlImage = document.getElementById("randomImage");
+				htmlImage.src = getRandomImage();
+				}
+				displayRandomImage();
+				</script>
+
+
+				</div>	
+				</div>
+				
+
+				<div class="width-12-12-m width-12-12">
+					<div class="book-nav"><h3><a href="tarotHome.html"><i>Home</i></a></h3></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<p>©2020 Lucy Wong | Tarot info from<a href="https://astrologybay.com/tarot-card-meanings-list" style="background-color:transparent">Astrology Bay</a></p>
+		</div>
+
+	</body>
+</html>
