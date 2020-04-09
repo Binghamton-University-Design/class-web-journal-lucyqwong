@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Daily Tarot Reading</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/grid-utils.css">
+		<link rel="stylesheet" href="css/Tstyle.css">
+		<link rel="stylesheet" href="css/tarot.css">
+
+
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <!--font is from google fonts-->
+		<script src="js/main.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+		
+
+		<div id="masthead">
+			<h4><a href="http://lucyqwong.com/" style="background-color: transparent">Digital Daily Tarot Reading | Designed by Lucy Wong</a></h4>
+		</div>
+
+		<div class="wrapper">
+			
+			<div class="grid">
+				
+				<script>
+					var elems = $("div");
+					if (elems.length) {
+					  var keep = Math.floor(Math.random() * elems.length);
+					  for (var i = 0; i < elems.length; ++i) {
+					    if (i !== keep) {
+					      $(elems[i]).hide();
+						    }
+						  }
+						}
+				</script>	
+
+				<div id=card1>
+					<div class="width-12-12-m width-12-12">
+					<div class="book-nav"><h1>The Fool (Upright)</h1></div> </div>
+				<div class="width-6-12-m width-6-12">
+					<img class="nice-image" src="images/card_1.png" alt="Try again :("/>
+				</div>	
+				<div class="width-5-12-m width-5-12">
+					<h2 class="info"><p>Beginnings, possibilities, pleasure, thoughtlessness, adventure, opportunity</p></h2><h3 class="info"><p><a href="tarotAll.html"><i>Explore the cards</i></a> | <a href="tarotHome.html"><i>Home</i></a></p></h3>
+				</div>
+				<div class="width-1-12-m width-1-12"></div>
+				</div>
+
+				<div id=card2>
+					<div class="width-12-12-m width-12-12">
+					<div class="book-nav"><h1>The Magician (Upright)</h1></div> </div>
+				<div class="width-6-12-m width-6-12">
+					<img class="nice-image" src="images/card_2.png" alt="Try again :("/>
+				</div>	
+				<div class="width-5-12-m width-5-12">
+					<h2 class="info"><p>Delay, unimaginative, insecurity, lack of self-confidence</p></h2><h3 class="info"><p><a href="tarotAll.html"><i>Explore the cards</i></a> | <a href="tarotHome.html"><i>Home</i></a></p></h3>
+				</div>
+				<div class="width-1-12-m width-1-12"></div>
+				</div>
+
+
+				<div id=card3>
+					<div class="width-12-12-m width-12-12">
+					<div class="book-nav"><h1>The High Priestess (Upright)</h1></div> </div>
+				<div class="width-6-12-m width-6-12">
+					<img class="nice-image" src="images/card_3.png" alt="Try again :("/>
+				</div>	
+				<div class="width-5-12-m width-5-12">
+					<h2 class="info"><p>Selfishness, shallowness, misunderstanding, ignorance</p></h2><h3 class="info"><p><a href="tarotAll.html"><i>Explore the cards</i></a> | <a href="tarotHome.html"><i>Home</i></a></p></h3>
+				</div>
+				<div class="width-1-12-m width-1-12"></div>
+				</div>
+
+				</div>
+				
+			</div>
+		</div>
+
+		<div id="footer">
+			<p>©2020 Lucy Wong | Tarot info from<a href="https://astrologybay.com/tarot-card-meanings-list" style="background-color:transparent">Astrology Bay</a></p>
+		</div>
+
+	</body>
+</html>

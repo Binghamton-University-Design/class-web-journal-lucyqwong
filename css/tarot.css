@@ -49,7 +49,7 @@
 }
 
 .info {
-  text-align: center;
+  text-align: left;
   color: black;
 }
 
@@ -64,4 +64,15 @@
 .h4 a:hover {
   color: #34113F;
   background-color: #34113F;
+}
+
+.button {
+  background-color: #EDC5DD;
+  padding: 15px 32px;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background-color: #34113F;
+  color: white;
 }
