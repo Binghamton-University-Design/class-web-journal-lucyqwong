@@ -27,20 +27,33 @@
 		<div class="wrapper">
 			
 			<div class="grid">
-				
-				<script>
-					var elems = $("div");
-					if (elems.length) {
-					  var keep = Math.floor(Math.random() * elems.length);
-					  for (var i = 0; i < elems.length; ++i) {
-					    if (i !== keep) {
-					      $(elems[i]).hide();
-						    }
-						  }
-						}
-				</script>	
 
-				<div id=card1>
+				<div class="card1" style="display:none;">1</div>
+				<div class="card2" style="display:none;">2</div>
+				<div class="card3" style="display:none;">3</div>
+
+				<script type="text/javascript">
+					divs = ['card1','card2','card3'];
+
+					var random = Math.floor(Math.random() * $('.card').length);
+$('.card').hide().eq(random).show();
+					
+					function hideDivs(){
+						for (var i=0; i<divs.length; i++)
+							document.getElementById(divs[i]).style.display='none';
+					}
+
+					function hideDivs() {
+						hideDivs();
+						var randomDiv=divs[Math.floor(Math.random()*divs.length)];
+						var div=document.getElementById(randomDiv).style.display='block';
+					}
+
+					showDiv();
+				</script>
+
+				<!--
+				<div id='card1'>
 					<div class="width-12-12-m width-12-12">
 					<div class="book-nav"><h1>The Fool (Upright)</h1></div> </div>
 				<div class="width-6-12-m width-6-12">
@@ -52,7 +65,7 @@
 				<div class="width-1-12-m width-1-12"></div>
 				</div>
 
-				<div id=card2>
+				<div id='card2'>
 					<div class="width-12-12-m width-12-12">
 					<div class="book-nav"><h1>The Magician (Upright)</h1></div> </div>
 				<div class="width-6-12-m width-6-12">
@@ -65,7 +78,7 @@
 				</div>
 
 
-				<div id=card3>
+				<div id='card3'>
 					<div class="width-12-12-m width-12-12">
 					<div class="book-nav"><h1>The High Priestess (Upright)</h1></div> </div>
 				<div class="width-6-12-m width-6-12">
@@ -76,7 +89,7 @@
 				</div>
 				<div class="width-1-12-m width-1-12"></div>
 				</div>
-
+				-->
 				</div>
 				
 			</div>
