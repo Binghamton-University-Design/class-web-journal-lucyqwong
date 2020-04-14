@@ -41,7 +41,7 @@ explore page to learn about all cards (make images into links), linked on indivi
 				
 				<div class="width-6-12-m width-6-12">
 					<figure>
- 			 			<img class="nice-image" src="images/card1.png" alt="Click to shuffle" data-alt="images/card1.gif">
+ 			 			<img id="deck" class="nice-image" src="images/card1.png" alt="Click to shuffle" data-alt="images/card1.gif">
 					</figure>
 				</div>	
 				<div class="width-5-12-m width-5-12">
@@ -53,7 +53,7 @@ explore page to learn about all cards (make images into links), linked on indivi
 				<div class="width-2-12-m width-2-12">
 				</div>
 				<div class="width-2-12-m width-2-12">
-					<a href="tarot00.html" class="button">Flip</a>
+					<a id="flip" href="#" class="button">Flip</a>
 				</div>
 				<div class="width-2-12-m width-2-12">
 				</div>
@@ -66,56 +66,26 @@ explore page to learn about all cards (make images into links), linked on indivi
 
 				</div>
 
+				<!-- script to trigger gif on click  -->
 				<script>
-				function getRandomPage() {
-				var pages = ['tarot1.html','tarot2.html'];
-				var page = images[Math.floor(Math.random()*pages.length)];
- 
-				return page;
-				}
- 
-				function displayRandomPage() {
-				var htmlImage = document.getElementById("randomPage");
-				htmlImage.src = getRandomPage();
-				}
-				displayRandomPage();
-				</script>
 
-						<!-- script to trigger gif on click  -->
-		<script>
-					var getGif = function() {
- 					 var gif = [];
- 					 $('img').each(function() {
- 					  var data = $(this).data('alt');
- 					   gif.push(data);
-					  });
- 					 return gif;
-					}
-					var gif = getGif();
-
-					var image = [];
-					$.each(gif, function(index) {
- 					 image[index]     = new Image();
- 					 image[index].src = gif[index];
-					});
+					function shuffle(imageUrl, div){
+    				var image = new Image();
+    				image.src = imageUrl;
+    				$(div).attr('src', image.src);
+  				}
 
 					$('figure').on('click', function() {
- 
-  					var $this   = $(this),
-			          $index  = $this.index(),
-           
- 				         $img    = $this.children('img'),
- 				         $imgSrc = $img.attr('src'),
- 				         $imgAlt = $img.attr('data-alt'),
- 				         $imgExt = $imgAlt.split('.');
-           
-  					if($imgExt[1] === 'gif') {
-				      $img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
-					  } else {
-				      $img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-						  }
- 
-						});
+  					shuffle('images/card1.gif', '#deck');
+					});
+
+					$('#flip').on('click', function() {
+						var myrandom=Math.round(Math.random()*78);
+						var page = "tarot"+myrandom+'.html'
+				    window.location=page;
+				    e.preventDefault();
+				    return false;
+					});
 
 				</script>
 
