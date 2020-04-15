@@ -17,7 +17,7 @@ explore page to learn about all cards (make images into links), linked on indivi
 		<link rel="stylesheet" href="css/tarot.css">
 
 
-		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <!--font is from google fonts-->
 		<script src="js/main.js"></script>
 
@@ -39,12 +39,13 @@ explore page to learn about all cards (make images into links), linked on indivi
 				<div class="width-12-12-m width-12-12">
 					<div class="book-nav"><h1>Welcome to your digital daily tarot reading!</h1></div> </div>
 				
-				<div class="width-6-12-m width-6-12">
+				<div class="width-7-12-m width-7-12">
 					<figure>
- 			 			<img id="deck" class="nice-image" src="images/card1.png" alt="Click to shuffle" data-alt="images/card1.gif">
+ 			 			<img id="deck" class="nice-rect" style="display:block;" src="images/card1.png" alt="Click to shuffle" data-alt="images/card1.gif">
+ 			 			<img id="cardflip" class="nice-rect" style="display:none;" src="images/card1.png" alt="Flip for fortune" data-alt="images/flip.gif">
 					</figure>
 				</div>	
-				<div class="width-5-12-m width-5-12">
+				<div class="width-4-12-m width-4-12">
 					<h3 class="info"><p>The purpose of the daily reading is to create a focus or meditation for the day. Tap the pile of cards to shuffle the cards as many times as you like, and when you're ready, press the <i>Flip</i> button to see it's face.</p></h3>
 				</div>	
 				<div class="width-1-12-m width-1-12">
@@ -53,9 +54,9 @@ explore page to learn about all cards (make images into links), linked on indivi
 				<div class="width-2-12-m width-2-12">
 				</div>
 				<div class="width-2-12-m width-2-12">
-					<a id="flip" href="#" class="button">Flip</a>
 				</div>
 				<div class="width-2-12-m width-2-12">
+					<button class="button" id="flip">Flip</button>
 				</div>
 				<div class="width-2-12-m width-2-12">
 				</div>
@@ -80,14 +81,22 @@ explore page to learn about all cards (make images into links), linked on indivi
 					});
 
 					$('#flip').on('click', function() {
-						var myrandom=Math.round(Math.random()*78);
-						var page = "tarot"+myrandom+'.html'
-				    window.location=page;
-				    e.preventDefault();
-				    return false;
+					$("#deck").hide();
+					$("#cardflip").show();
+					shuffle('images/flip.gif', '#cardflip');
+			//			var myrandom=Math.round(Math.random()*78);
+			//			var page = "tarot"+myrandom+'.html'
+			//	    window.location=page;
+			//	    e.preventDefault();
+			//	    return false;
 					});
 
+
 				</script>
+
+				<div id='card1' style="display:none;">
+					<h2 class="info"><p>Beginnings, possibilities, pleasure, thoughtlessness, adventure, opportunity</p></h2><h3 class="info"><p><a href="tarotAll.html"><i>Explore the cards</i></a> | <a href="tarotHome.html"><i>Home</i></a></p></h3>
+				</div>
 
 			</div>
 		</div>
