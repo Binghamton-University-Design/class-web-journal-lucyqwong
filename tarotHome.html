@@ -84,12 +84,31 @@ explore page to learn about all cards (make images into links), linked on indivi
 					$("#deck").hide();
 					$("#cardflip").show();
 					shuffle('images/flip.gif', '#cardflip');
+					});
+
+					var x = document.getElementById(#cardflip);
+					if (window.getComputedStyle(x).display === "show") {
+				//	$('#flip').on('click', function() {
+				//	shuffle('images/flip.gif', '#cardflip');
+						var myrandom=Math.round(Math.random()*78);
+						var page = "tarot"+myrandom+'.html';
+				    window.location=page;
+				    e.preventDefault();
+				    return false;
+				//	});
+					}
+
+					// ORIGINAL CODE
+			//		$('#flip').on('click', function() {
+			//		shuffle('images/flip.gif', '#cardflip');
 			//			var myrandom=Math.round(Math.random()*78);
 			//			var page = "tarot"+myrandom+'.html'
 			//	    window.location=page;
 			//	    e.preventDefault();
 			//	    return false;
-					});
+			//		});
+
+
 
 
 				</script>
