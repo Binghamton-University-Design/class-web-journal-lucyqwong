@@ -330,9 +330,9 @@ explore page to learn about all cards (make images into links), linked on indivi
 					//determine orientation of card (goal is to change class)
 					var z = document.getElementById('randomCard');
 					var orient=Math.round(Math.random()*2);
-				//	if (orient=1) {
-				//		x.class="nice-imageR";
-				//	}
+					if (orient=1) {
+						z.style.transform="rotate(180deg)";
+					}
 
 
 					function displayRandomImage() {
