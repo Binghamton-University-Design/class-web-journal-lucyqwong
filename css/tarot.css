@@ -8,7 +8,7 @@
 }
 
 .nice-image {
-  width: 100%;
+  width: 70%;
   height: auto;
   display: block;
   margin-left: auto;
@@ -29,6 +29,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
 }
 
 .nice-card {
@@ -91,4 +92,71 @@
 .button:hover {
   background-color: #34113F;
   color: white;
+}
+
+.reverse {
+  -webkit-perspective: 800;
+  -ms-perspective: 800;
+  -moz-perspective: 800;
+  -o-perspective: 800;
+   width: 396px;
+   height: 649px;
+   position: relative;
+   margin: 50px auto;
+}
+.reverse .card.flipped {
+  transform:rotatey(-180deg);
+  -ms-transform:rotatey(-180deg); /* IE 9 */
+  -moz-transform:rotatey(-180deg); /* Firefox */
+  -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
+  -o-transform:rotatey(-180deg); /* Opera */
+}
+.reverse .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: 0.5s;
+  -ms-transform-style: preserve-3d;
+  -ms-transition: 0.5s;
+  -o-transform-style: preserve-3d;
+  -o-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+.reverse .card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.4em;
+  text-align: center;
+  line-height: 1.5em;
+  backface-visibility: hidden;  /* W3C */
+  -webkit-backface-visibility: hidden; /* Safari & Chrome */
+  -moz-backface-visibility: hidden; /* Firefox */
+  -ms-backface-visibility: hidden; /* Internet Explorer */
+  -o-backface-visibility: hidden; /* Opera */
+
+}
+.reverse .card .front {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+}
+.reverse .card .back {
+    cursor: pointer;
+    
+  transform:rotatey(-180deg);
+  -ms-transform:rotatey(-180deg); /* IE 9 */
+  -moz-transform:rotatey(-180deg); /* Firefox */
+  -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
+  -o-transform:rotatey(-180deg); /* Opera */
+
+}
+
+.reverse .card .face table {
+    height: 100%;
 }
