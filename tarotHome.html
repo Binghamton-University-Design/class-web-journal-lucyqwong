@@ -29,17 +29,37 @@ explore page to learn about all cards (make images into links), linked on indivi
 			<!--<ul>
 				<li><a class="active" href="tarotHome.html">Home</a></li>
 				<li><a href="tarotAll.html">Explore</a></li> 
-				<li>-->Digital Daily Tarot Reading | Designed by<a href="http://lucyqwong.com/" style="background-color: transparent">Lucy Wong</a>
+				<li>-->Digital Tarot Reading | Designed by<a href="http://lucyqwong.com/" style="background-color: transparent">Lucy Wong</a>
 			</ul>
 		</div>
 
 		<div class="wrapper">
 
 			<div class="grid">
-				<div class="width-12-12-m width-12-12">
-					<div class="fade-in"><div class="book-nav"><h1>Welcome to your digital daily tarot reading!</h1></div></div> </div>
+				<div class="width-12-12-m width-12-12" >
+					<div class="fade-in"><div class="book-nav"><h1>Welcome to your digital tarot reading!</h1></div></div>
+				</div>
 				
-				<div class="width-7-12-m width-7-12">
+				<div class="width-12-12-m width-12-12" id="start" style="display:block;">
+					<div class="fade-in"><div class="book-nav"><h2>Would you like to do a one card reading or a three card reading? </h2></div></div>
+				</div>
+				
+				<div class="width-1-12-m width-1-12" id="startA">
+				</div>
+				<div class="width-4-12-m width-4-12" id="startB" style="display:block;">
+					<div class="fade-in"><p>The purpose of the one card or daily reading is to create a focus or meditation for the day, or to have something to reflect upon at the end of the day.</p><button class="button" id="oneC" style="display:block;">One card reading</button></div>
+				</div>
+				<div class="width-1-12-m width-1-12" id="startC">
+				</div>
+				<div class="width-5-12-m width-5-12" id="startD" style="display:block;">
+					<div class="fade-in"><p>The purpose of the three card reading is to suggest a linear path or sequence of events. To select this reading, choose one of the following scenarios and focus on your question or problem: <ul><li>Past, present, future</li><li>You, your path, your potential</li><li>You, relationship, partner</li><li>Situation, action, outcome</li><li>Idea, process, aspiration</li></ul></p><button class="button" id="threeC" style="display:block;">Three card reading</button></div>
+				</div>
+				<div class="width-1-12-m width-1-12" id="startE">
+				</div>
+				
+
+				
+				<div class="width-6-12-m width-6-12" id="selectOneC" style="display:none;">
 					<div class = "reverse">
 						<div class = "card">
 							<div class = "front">
@@ -51,8 +71,8 @@ explore page to learn about all cards (make images into links), linked on indivi
 						</div>
 					</div>
 				</div>	
-				<div class="width-4-12-m width-4-12">
-					<div class="fade-in"><h3 class="info" id="info"><p>The purpose of the daily reading is to create a focus or meditation for the day. Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p></h3>
+				<div class="width-5-12-m width-5-12" id="selectOneCa" style="display:none;">
+					<div class="fade-in"><h3 class="info" id="info"><p>Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p></h3>
 					<button class="button" id="flip" style="display:block;">Shuffle</button></div>
 
 					<div id='card_1' style="display:none;">
@@ -608,12 +628,34 @@ explore page to learn about all cards (make images into links), linked on indivi
 					<h2 class="info"><p><h2>Card 77: King of Pentacles (Reversed)</h2></p><p>ribes, materialistic, calm.</p></h2></div>
 
 				</div>
-
+				<div class="width-1-12-m width-1-12" id="selectOneCb">
 				</div>
 
 				</div>
+
+				</div>
+
+				
 
 				<script>
+					//one card reading
+					$('#oneC').on('click', function() {
+  						$("#start").hide();
+  						$("#startA").hide();
+  						$("#startB").hide();
+  						$("#startC").hide();
+  						$("#startD").hide();
+  						$("#startE").hide();
+  						$("#selectOneC").show();
+  						$("#selectOneCa").show();
+  						$("#selectOneCa").show();
+						});
+
+					$('#threeC').on('click', function() {
+  					
+					});
+
+
 					//script to trigger gif on click 
 					function shuffle(imageUrl, div){
     				var image = new Image();

@@ -25,7 +25,7 @@
 }
 
 .nice-rect {
-  width: 100%;
+  width: 70%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -92,6 +92,7 @@
 .button:hover {
   background-color: #34113F;
   color: white;
+  cursor: pointer;
 }
 
 .reverse {
@@ -162,11 +163,11 @@
 }
 
 .fade-in {
-  animation: fadeIn ease 4s;
-  -webkit-animation: fadeIn ease 4s;
-  -moz-animation: fadeIn ease 4s;
-  -o-animation: fadeIn ease 4s;
-  -ms-animation: fadeIn ease 4s;
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
 }
 @keyframes fadeIn {
   0% {
