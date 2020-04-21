@@ -57,8 +57,6 @@ explore page to learn about all cards (make images into links), linked on indivi
 				<div class="width-1-12-m width-1-12" id="startE">
 				</div>
 				
-
-				
 				<div class="width-6-12-m width-6-12" id="selectOneC" style="display:none;">
 					<div class = "reverse">
 						<div class = "card">
@@ -72,7 +70,7 @@ explore page to learn about all cards (make images into links), linked on indivi
 					</div>
 				</div>	
 				<div class="width-5-12-m width-5-12" id="selectOneCa" style="display:none;">
-					<div class="fade-in"><h3 class="info" id="info"><p>Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p></h3>
+					<div class="fade-in"><p class="info" id="info">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
 					<button class="button" id="flip" style="display:block;">Shuffle</button></div>
 
 					<div id='card_1' style="display:none;">
@@ -631,6 +629,66 @@ explore page to learn about all cards (make images into links), linked on indivi
 				<div class="width-1-12-m width-1-12" id="selectOneCb">
 				</div>
 
+				<div class="width-1-12-m width-1-12" id="selectOneCb">
+				</div>
+				<div class="width-3-12-m width-3-12" id="selectTh" style="display:none;">
+					<div class = "reverseA">
+						<div class = "cardA">
+							<div class = "front">
+								<img id="yyy" class="nice-image" style="display:block;" src="images/card 1.png">
+							</div>
+							<div class = "back">
+								 <img class="nice-rect" id="randomCardA" style="display:none;" alt="Try again :("/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="width-3-12-m width-3-12" id="selectThA" style="display:none;">
+					<div class = "reverseB">
+						<div class = "cardB">
+							<div class = "front">
+								<img id="yyyy" class="nice-image" style="display:block;" src="images/card 1.png">
+							</div>
+							<div class = "back">
+								 <img class="nice-rect" id="randomCardB" style="display:none;" alt="Try again :("/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="width-3-12-m width-3-12" id="selectThB" style="display:none;">
+					<div class = "reverseC">
+						<div class = "cardC">
+							<div class = "front">
+								<img id="yyyyy" class="nice-image" style="display:block;" src="images/card 1.png">
+							</div>
+							<div class = "back">
+								 <img class="nice-rect" id="randomCardC" style="display:none;" alt="Try again :("/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="width-3-12-m width-3-12" id="selectThC" style="display:none;">
+					<div class="fade-in"><p class="info" id="info1">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
+					<button class="button" id="flip1" style="display:block;">Shuffle</button></div>
+				</div>
+				<div class="width-1-12-m width-1-12" id="selectOneCb">
+				</div>
+
+				<div class="width-3-12-m width-3-12" id="selectThD"style="display:none;">
+					<div class="fade-in"><p class="info" id="info2">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
+					<button class="button" id="flip2" style="display:block;">Shuffle</button></div>
+				</div>
+				<div class="width-1-12-m width-1-12" id="selectOneCb">
+				</div>
+
+				<div class="width-3-12-m width-3-12" id="selectThE"style="display:none;">
+					<div class="fade-in"><p class="info" id="info3">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
+					<button class="button" id="flip3" style="display:block;">Shuffle</button></div>
+				</div>
+
 				</div>
 
 				</div>
@@ -651,7 +709,20 @@ explore page to learn about all cards (make images into links), linked on indivi
   						$("#selectOneCa").show();
 						});
 
+					//three card reading
 					$('#threeC').on('click', function() {
+						$("#start").hide();
+  						$("#startA").hide();
+  						$("#startB").hide();
+  						$("#startC").hide();
+  						$("#startD").hide();
+  						$("#startE").hide();
+  						$("#selectTh").show();
+  						$("#selectThA").show();
+  						$("#selectThB").show();
+  						$("#selectThC").show();
+  						$("#selectThD").show();
+  						$("#selectThE").show();
   					
 					});
 
@@ -668,6 +739,14 @@ explore page to learn about all cards (make images into links), linked on indivi
 					var card = "card_"+myrandom;
 					var cardImg = "images/"+card+'.png';
 
+					var myrandom1=Math.round(Math.random()*78);
+					var card1 = "card_"+myrandom1;
+					var cardImg1 = "images/"+card+'.png';
+
+					var myrandom2=Math.round(Math.random()*78);
+					var card2 = "card_"+myrandom2;
+					var cardImg2 = "images/"+card+'.png';
+
 					//randomize card orientation
 					var z = document.getElementById('randomCard');
 					if (Math.random() >= 0.5) {
@@ -681,16 +760,40 @@ explore page to learn about all cards (make images into links), linked on indivi
 					var htmlImage = document.getElementById('randomCard');
 					htmlImage.src = cardImg;
 					}
+					function displayRandomImage1() {
+					var htmlImage1 = document.getElementById('randomCard');
+					htmlImage.src = cardImg1;
+					}
+					function displayRandomImage2() {
+					var htmlImage2 = document.getElementById('randomCard');
+					htmlImage.src = cardImg2;
+					}
 
 					//shuffle the cards
 					$('#flip').on('click', function() {
   					shuffle('images/card1.gif', '#xxxxx');
 					});
-
 					var flipped = false;
+
+					$('#flip1').on('click', function() {
+  					shuffle('images/card1.gif', '#yyy');
+					});
+					var flipped = false;
+
+					$('#flip2').on('click', function() {
+  					shuffle('images/card1.gif', '#yyyy');
+					});
+					var flipped = false;
+
+					$('#flip3').on('click', function() {
+  					shuffle('images/card1.gif', '#yyyyy');
+					});
+					var flipped = false;
+
 
 					//click to reveal card
 					
+					//one card
 					$(".reverse").click(function(){
 						if (!flipped) {
 					  $(this).find(".card").toggleClass("flipped");
@@ -705,6 +808,52 @@ explore page to learn about all cards (make images into links), linked on indivi
 					  flipped = true; }
 					}
 					}); 
+
+					//three card
+					$(".reverseA").click(function(){
+						if (!flipped) {
+					  $(this).find(".cardA").toggleClass("flipped");
+					  $("#yyy").hide("fast",function(){
+					  $("#randomCardA").show(); 
+					displayRandomImage();});
+					var a = document.getElementById(card);
+  					if (window.getComputedStyle(a).display === "none") {
+					  $("#info1").hide(1000);
+					  $('#flip1').hide();
+   						$(a).show(2000);
+					  flipped = true; }
+					  }
+					});
+
+					  $(".reverseB").click(function(){
+						if (!flipped) {
+					  $(this).find(".cardB").toggleClass("flipped");
+					  $("#yyyy").hide("fast",function(){
+					  $("#randomCardB").show(); 
+					displayRandomImage1();});
+					var b = document.getElementById(card1);
+  					if (window.getComputedStyle(b).display === "none") {
+					  $("#info2").hide(1000);
+					  $('#flip2').hide();
+   						$(b).show(2000);
+					  flipped = true; }
+					  }
+					});
+
+					  $(".reverseC").click(function(){
+						if (!flipped) {
+					  $(this).find(".cardC").toggleClass("flipped");
+					  $("#yyyyy").hide("fast",function(){
+					  $("#randomCardC").show(); 
+					displayRandomImage2();});
+					var c = document.getElementById(card2);
+  					if (window.getComputedStyle(c).display === "none") {
+					  $("#info3").hide(1000);
+					  $('#flip3').hide();
+   						$(c).show(2000);
+					  flipped = true; }
+					  }
+					});
 					
 
 				//	$('#flip').on('click', function() {
