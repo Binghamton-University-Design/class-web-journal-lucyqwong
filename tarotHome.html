@@ -29,12 +29,15 @@
 
 			<div class="grid">
 				<div class="width-12-12-m width-12-12" >
-					<div class="fade-in"><div class="book-nav"><h1>Welcome to your digital tarot reading!</h1></div></div>
+					<div class="fade-in"><div class="book-nav"><h1><img id="decor" class="nice-decor" src="images/decor1.png" style="width:7%;">Welcome to your digital tarot reading!<img id="decor" class="nice-decor" src="images/decor2.png" style="width:7%;"></h1></div></div>
 				</div>
-				
 				<div class="width-12-12-m width-12-12" id="start" style="display:block;">
 					<div class="fade-in"><div class="book-nav"><h2>Would you like to do a one card reading or a three card reading? </h2></div></div>
 				</div>
+
+				<div class="width-12-12-m width-12-12" id="3c" style="display:none;">
+					<div class="fade-in"><div class="book-nav"><h2>Three card reading: <span id="selected"></span></h2></div></div>
+				</div> 
 
 				<div class="width-1-12-m width-1-12" id="startA" style="display:block;"></div>
 
@@ -43,7 +46,15 @@
 				</div>
 
 				<div class="width-5-12-m width-5-12" id="startC" style="display:block;">
-					<div class="fade-in"><p>The purpose of the three card reading is to suggest a linear path or sequence of events. To select this reading, choose one of the following scenarios and focus on your question or problem: <ul><li>Past, present, future</li><li>You, your path, your potential</li><li>You, relationship, partner</li><li>Situation, action, outcome</li><li>Idea, process, aspiration</li></ul></p><button class="button" id="threeC" style="display:block;">Three card reading</button></div>
+					<div class="fade-in"><p>The purpose of the three card reading is to suggest a linear path or sequence of events. <label for="scenarios">To select this reading, choose one of the following scenarios and focus on your question or problem:</label></p>
+						<select id="scenarios">
+						<option value="ppf">Past, present, future</option>
+						<option value="ypp">You, your path, your potential</option>
+						<option value="yrp">You, relationship, partner</option>
+						<option value="sao">Situation, action, outcome</option>
+						<option value="ipa">Idea, process, aspiration</option> </select>
+						<p></p>
+					<button class="button" id="threeC" style="display:block;">Three card reading</button></div>
 				</div>
 
 				<div class="width-1-12-m width-1-12" id="startD" style="display:block;"></div>
@@ -75,8 +86,7 @@
 						</div>
 					</div>
 
-					<div class="fade-in"><p class="info" id="info1">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
-					<button class="button" id="flip1" style="display:block;">Shuffle</button>
+					<div class="fade-in"><p class="info" id="info1">Hover over the pile to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p>
 					</div>
 				</div>
 
@@ -91,8 +101,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="fade-in"><p class="info" id="info2">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
-					<button class="button" id="flip2" style="display:block;">Shuffle</button>
+					<div class="fade-in"><p class="info" id="info2">Hover over the pile to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p>
 					</div>
 				</div>
 
@@ -107,14 +116,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="fade-in"><p class="info" id="info3">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
-					<button class="button" id="flip3" style="display:block;" onClick="rotateImage(360);">Shuffle</button>
+					<div class="fade-in"><p class="info" id="info3">Hover over the pile to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p>
 					</div>
 				</div>
 
 					<div class="width-4-12-m width-4-12" id="selectOneCa" style="display:none;">
-					<p>Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
-					<button class="button" id="flip" style="display:block;">Shuffle</button></div>
+					<p>Hover over the pile to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p></div>
 
 					<div class="width-4-12-m width-4-12" id='card_1' style="display:none;">
 					<h2 class="info"><p><h2>Card 0: The Fool</h2></p><p>Beginnings, possibilities, pleasure, thoughtlessness, adventure, opportunity.</p></div>
@@ -612,14 +619,18 @@
   						$("#startB").hide();
   						$("#startC").hide();
   						$("#startD").hide();
+  						$("#3c").show();
+  						//display selection from dropdown
+  					var e = document.getElementById("scenarios");
+					var text = e.options[e.selectedIndex].text;
+					document.getElementById("selected").innerHTML = text;
   						$("#selectTh").show();
   						$("#selectThA").show();
   						$("#selectThB").show();
   						$("#selectThC").show();
   						$("#selectThD").show();
   						$("#selectThE").show();
-  					
-					});
+  						});
 
 					//script to trigger gif on click 
 					function shuffle(imageUrl, div){
@@ -632,34 +643,22 @@
 				//	$('#flip').on('click', function() {
   				//	shuffle('images/card1.gif', '#xxxxx');
 				//	});
-				//	var flipped = false;
+					var flipped = false;
 
-					$('#flip1').on('click', function() {
-  					shuffle('images/card1.gif', '#yyy');
-					});
+				//	$('#flip1').on('click', function() {
+  				//	shuffle('images/card1.gif', '#yyy');
+				//	});
 					var flipped1 = false;
-
-					$('#flip2').on('click', function() {
-  					shuffle('images/card1.gif', '#yyyy');
-					});
+//
+//					$('#flip2').on('click', function() {
+  //					shuffle('images/card1.gif', '#yyyy');
+//					});
 					var flipped2 = false;
-
-					$('#flip3').on('click', function() {
-  					shuffle('images/card1.gif', '#yyyyy');
-					});
+//
+//					$('#flip3').on('click', function() {
+  //					shuffle('images/card1.gif', '#yyyyy');
+	//				});
 					var flipped3 = false;
-
-					function rotateImage(degree) {
-					$('#xxxxx').animate({  transform: degree }, {
-				    step: function(now,fx) {
-  			    	$(this).css({
-      			      '-webkit-transform':'rotate('+now+'deg)', 
-      			      '-moz-transform':'rotate('+now+'deg)',
-        			   'transform':'rotate('+now+'deg)'
-     				   });
-  					  }
-   					 });
-					}
 
 
 

@@ -13,7 +13,33 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  left: 34%
+  transform: rotate(0deg);
+  -webkit-transition: 0.30s;
+  -moz-transition: 0.30s;
+  -ms-transition: 0.30s;
+  -o-transition: 0.30s;
+}
+
+.nice-image:hover {
+  transform: rotate(360deg);
+  transition: transform 0.30s;
+  -webkit-transition: 0.30s;
+  -moz-transition: 0.30s;
+  -ms-transition: 0.30s;
+  -o-transition: 0.30s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+} 
+
+.nice-decor {
+  width: 80%;
+  height: auto;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: right;
 }
 
 .nice-rect {
