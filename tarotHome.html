@@ -1,9 +1,3 @@
-<!--
-method: home page has two options, shuffle (refresh the page) or flip the card (pick a random page from array of 156) -> create gif for shuffling cards
-random pages: 78 right way up cards (nice-image), 78 upside down cards (nice-imageR)
-explore page to learn about all cards (make images into links), linked on individual card pages
-
--->
 
 <!doctype html>
 <html lang="en">
@@ -15,8 +9,6 @@ explore page to learn about all cards (make images into links), linked on indivi
 		<link rel="stylesheet" href="css/grid-utils.css">
 		<link rel="stylesheet" href="css/Tstyle.css">
 		<link rel="stylesheet" href="css/tarot.css">
-
-
 		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <!--font is from google fonts-->
 		<script src="js/main.js"></script>
@@ -43,23 +35,22 @@ explore page to learn about all cards (make images into links), linked on indivi
 				<div class="width-12-12-m width-12-12" id="start" style="display:block;">
 					<div class="fade-in"><div class="book-nav"><h2>Would you like to do a one card reading or a three card reading? </h2></div></div>
 				</div>
-				
-				<div class="width-1-12-m width-1-12" id="startA">
-				</div>
-				<div class="width-4-12-m width-4-12" id="startB" style="display:block;">
+
+				<div class="width-1-12-m width-1-12" id="startA" style="display:block;"></div>
+
+				<div class="width-5-12-m width-5-12" id="startB" style="display:block;">
 					<div class="fade-in"><p>The purpose of the one card or daily reading is to create a focus or meditation for the day, or to have something to reflect upon at the end of the day.</p><button class="button" id="oneC" style="display:block;">One card reading</button></div>
 				</div>
-				<div class="width-1-12-m width-1-12" id="startC">
-				</div>
-				<div class="width-5-12-m width-5-12" id="startD" style="display:block;">
+
+				<div class="width-5-12-m width-5-12" id="startC" style="display:block;">
 					<div class="fade-in"><p>The purpose of the three card reading is to suggest a linear path or sequence of events. To select this reading, choose one of the following scenarios and focus on your question or problem: <ul><li>Past, present, future</li><li>You, your path, your potential</li><li>You, relationship, partner</li><li>Situation, action, outcome</li><li>Idea, process, aspiration</li></ul></p><button class="button" id="threeC" style="display:block;">Three card reading</button></div>
 				</div>
-				<div class="width-1-12-m width-1-12" id="startE">
-				</div>
+
+				<div class="width-1-12-m width-1-12" id="startD" style="display:block;"></div>
 				
 				<div class="width-6-12-m width-6-12" id="selectOneC" style="display:none;">
 					<div class = "reverse">
-						<div class = "card">
+						<div class = "card" id="box1">
 							<div class = "front">
 								<img id="xxxxx" class="nice-image" style="display:block;" src="images/card 1.png">
 							</div>
@@ -69,569 +60,10 @@ explore page to learn about all cards (make images into links), linked on indivi
 						</div>
 					</div>
 				</div>	
-				<div class="width-5-12-m width-5-12" id="selectOneCa" style="display:none;">
-					<div class="fade-in"><p class="info" id="info">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
-					<button class="button" id="flip" style="display:block;">Shuffle</button></div>
 
-					<div id='card_1' style="display:none;">
-					<h2 class="info"><p><h2>Card 0: The Fool</h2></p><p>Beginnings, possibilities, pleasure, thoughtlessness, adventure, opportunity.</p></h2>
-					</div>
-					
-					<div id='card_2' style="display:none;">
-					<h2 class="info"><p><h2>Card 1: The Magician</h2></p><p>Creativity, self-confidence, dexterity, sleight of hand, will-power, skill.</p></h2>
-					</div>
+				<div class="width-1-12-m width-1-12" id="selectOneCar" style="display:none;"></div>
 
-					<div id='card_3' style="display:none;">
-					<h2 class="info"><p><h2>Card 2: The High Priestess</h2></p><p>Knowledge, wisdom, learning, intuition, impatience, virtue, purity.</p></h2>
-					</div>
-
-					<div id='card_4' style="display:none;">
-					<h2 class="info"><p><h2>Card 3: The Empress</h2></p><p>Development, accomplishment action, evolution.</p></h2>
-					</div>
-
-					<div id='card_5' style="display:none;">
-					<h2 class="info"><p><h2>Card 4: The Emperor</h2></p><p>Authority, father-figure, structure, solid foundation.</p></h2>
-					</div>
-
-					<div id='card_6' style="display:none;">
-					<h2 class="info"><p><h2>Card 5: The Hierophant</h2></p><p>Mercy, conformity, forgiveness, social approval, bonding, inspiration.</p></h2>
-					</div>
-
-					<div id='card_7' style="display:none;">
-					<h2 class="info"><p><h2>Card 6: The Lovers</h2></p><p>Harmony, trust,romance, optimism, honor, love, harmony.</p></h2>
-					</div>
-
-					<div id='card_8' style="display:none;">
-					<h2 class="info"><p><h2>Card 7: The Chariot</h2></p><p>Perseverance, rushed decision, turmoil, vengeance, adversity.</p></h2>
-					</div>
-
-					<div id='card_9' style="display:none;">
-					<h2 class="info"><p><h2>Card 8: Strength</h2></p><p>Courage, conviction, strength, determination, action, heroism, virility. </p></h2>
-					</div>
-
-
-					<div id='card_10' style="display:none;">
-					<h2 class="info"><p><h2>Card 9: The Hermit</h2></p><p>Inner strength, prudence, withdrawal, caution, vigilance.</p></h2>
-					</div>
-
-					<div id='card_11' style="display:none;">
-					<h2 class="info"><p><h2>Card 10: The Wheel of Fortune</h2></p><p>Unexpected events, advancement, destiny, fortune, progress.</p></h2>
-					</div>
-
-					<div id='card_12' style="display:none;">
-					<h2 class="info"><p><h2>Card 11: Justice</h2></p><p>Equality, righteousness, virtue, honor, harmony, balance.</p></h2>
-					</div>
-
-					<div id='card_13' style="display:none;">
-					<h2 class="info"><p><h2>Card 12: The Hanged Man</h2></p><p>Change, reversal, boredom, improvement, rebirth, suspension, change.</p></h2>
-					</div>
-
-					<div id='card_14' style="display:none;">
-					<h2 class="info"><p><h2>Card 13: Death</h2></p><p>Unexpected change, loss, failure, transformation, death, bad luck.</p></h2>
-					</div>
-
-					<div id='card_15' style="display:none;">
-					<h2 class="info"><p><h2>Card 14: Temperance</h2></p><p>Temperance, patience, good influence, confidence, moderation.</p></h2>
-					</div>
-
-					<div id='card_16' style="display:none;">
-					<h2 class="info"><p><h2>Card 15: The Devil</h2></p><p>Downfall, unexpected failure, controversy, ravage, disaster, ill temper.</p></h2>
-					</div>
-
-					<div id='card_17' style="display:none;">
-					<h2 class="info"><p><h2>Card 16: The Tower</h2></p><p>Disruption, abandonment, end of friendship, bankruptcy, downfall, unexpected events.</p></h2>
-					</div>
-
-					<div id='card_18' style="display:none;">
-					<h2 class="info"><p><h2>Card 17: The Star</h2></p><p>Balance, pleasure, optimism, insight, spiritual love, hope, faith.</p></h2>
-					</div>
-
-					<div id='card_19' style="display:none;">
-					<h2 class="info"><p><h2>Card 18: The Moon</h2></p><p>Double-dealing, deception, disillusionment, trickery, error, danger, disgrace.</p></h2>
-					</div>
-
-					<div id='card_20' style="display:none;">
-					<h2 class="info"><p><h2>Card 19: The Sun</h2></p><p>Accomplishment, success, love, joy, happy marriage, satisfaction.</p></h2>
-					</div>
-
-					<div id='card_21' style="display:none;">
-					<h2 class="info"><p><h2>Card 20: Judgement</h2></p><p>Awakening, renewal, rejuvenation, rebirth, improvement, promotion, atonement, judgment.</p></h2>
-					</div>
-
-					<div id='card_22' style="display:none;">
-					<h2 class="info"><p><h2>Card 21: The World</h2></p><p>Perfection, recognition, success, fulfillment, eternal life.</p></h2>
-					</div>
-
-					<div id='card_23' style="display:none;">
-					<h2 class="info"><p><h2>Card 22: Ace of Wands</h2></p><p>Profitable journey, new business, beginning, new career, birth, inheritance.</p></h2>
-					</div>
-
-					<div id='card_24' style="display:none;">
-					<h2 class="info"><p><h2>Card 23: Two of Wands</h2></p><p>Generous person, courage, patience, courage.</p></h2>
-					</div>
-
-					<div id='card_25' style="display:none;">
-					<h2 class="info"><p><h2>Card 24: Three of Wands</h2></p><p>Cooperation, good partnership, success.</p></h2>
-					</div>
-
-					<div id='card_26' style="display:none;">
-					<h2 class="info"><p><h2>Card 25: Four of Wands</h2></p><p>Dissatisfaction, kindness, reevaluation.</p></h2>
-					</div>
-
-					<div id='card_27' style="display:none;">
-					<h2 class="info"><p><h2>Card 26: Five of Wands</h2></p><p>Lawsuit or quarrel, courage, competition.</p></h2>
-					</div>
-
-					<div id='card_28' style="display:none;">
-					<h2 class="info"><p><h2>Card 27: Six of Wands</h2></p><p>Leadership, good news, success.</p></h2>
-					</div>
-
-					<div id='card_29' style="display:none;">
-					<h2 class="info"><p><h2>Card 28: Seven of Wands</h2></p><p>Stiff competition, victory, courage, energy.</p></h2>
-					</div>
-
-					<div id='card_30' style="display:none;">
-					<h2 class="info"><p><h2>Card 29: Eight of Wands</h2></p><p>New ideas, love, journey.</p></h2>
-					</div>
-
-					<div id='card_31' style="display:none;">
-					<h2 class="info"><p><h2>Card 30: Nine of Wands</h2></p><p>Victory, good health, obstinacy.</p></h2>
-					</div>
-
-					<div id='card_32' style="display:none;">
-					<h2 class="info"><p><h2>Card 31: Ten of Wands</h2></p><p>Pain, ruin, failure.</p></h2>
-					</div>
-
-					<div id='card_33' style="display:none;">
-					<h2 class="info"><p><h2>Card 32: Page of Wands</h2></p><p>Enthusiasm, exploration, discovery, free spirit.</p></h2>
-					</div>
-
-					<div id='card_34' style="display:none;">
-					<h2 class="info"><p><h2>Card 33: Knight of Wands</h2></p><p>Generous, journey, impetuous.</p></h2>
-					</div>
-
-					<div id='card_35' style="display:none;">
-					<h2 class="info"><p><h2>Card 34: Queen of Wands</h2></p><p>Fondness, attraction, command.</p></h2>
-					</div>
-
-					<div id='card_36' style="display:none;">
-					<h2 class="info"><p><h2>Card 35: King of Wands</h2></p><p>Passionate, good leader, noble.</p></h2>
-					</div>
-
-					<div id='card_37' style="display:none;">
-					<h2 class="info"><p><h2>Card 36: Ace of Cups</h2></p><p>Good health, love, joy, beauty.</p></h2>
-					</div>
-
-					<div id='card_38' style="display:none;">
-					<h2 class="info"><p><h2>Card 37: Two of Cups</h2></p><p>Romance, friendship, cooperation.</p></h2>
-					</div>
-
-					<div id='card_39' style="display:none;">
-					<h2 class="info"><p><h2>Card 38: Three of Cups</h2></p><p>Fortune, hospitality, discovery.</p></h2>
-					</div>
-
-					<div id='card_40' style="display:none;">
-					<h2 class="info"><p><h2>Card 39: Four of Cups</h2></p><p>Dissatisfaction, kindness, reevaluation, redemption.</p></h2>
-					</div>
-
-					<div id='card_41' style="display:none;">
-					<h2 class="info"><p><h2>Card 40: Five of Cups</h2></p><p>Broken marriage,vain regret, sorrow, loss.</p></h2>
-					</div>
-
-					<div id='card_42' style="display:none;">
-					<h2 class="info"><p><h2>Card 41: Six of Cups</h2></p><p>Acquaintance, good memories, acquaintance, happiness.</p></h2></div>
-
-					<div id='card_43' style="display:none;">
-					<h2 class="info"><p><h2>Card 42: Seven of Cups</h2></p><p>Imagination, illusion, directionless.</p></h2></div>
-
-					<div id='card_44' style="display:none;">
-					<h2 class="info"><p><h2>Card 43: Eight of Cups</h2></p><p>Disappointment, abandonment, misery.</p></h2></div>
-
-					<div id='card_45' style="display:none;">
-					<h2 class="info"><p><h2>Card 44: Nine of Cups</h2></p><p>Physical well-being, hopes, security.</p></h2></div>
-
-					<div id='card_46' style="display:none;">
-					<h2 class="info"><p><h2>Card 45: Ten of Cups</h2></p><p>Friendship, happiness, life.</p></h2></div>
-
-					<div id='card_47' style="display:none;">
-					<h2 class="info"><p><h2>Card 46: Page of Cups</h2></p><p>Sweetness, interest in literature, gentleness.</p></h2></div>
-
-					<div id='card_48' style="display:none;">
-					<h2 class="info"><p><h2>Card 47: Knight of Cups</h2></p><p>Emotional, romantic dreamer, intelligence.</p></h2></div>
-
-					<div id='card_49' style="display:none;">
-					<h2 class="info"><p><h2>Card 48: Queen of Cups</h2></p><p>Loving mother, gentle, happiness.</p></h2></div>
-
-					<div id='card_50' style="display:none;">
-					<h2 class="info"><p><h2>Card 49: King of Cups</h2></p><p>Kindness, willingness, enjoyment.</p></h2></div>
-
-					<div id='card_51' style="display:none;">
-					<h2 class="info"><p><h2>Card 50: Ace of Swords</h2></p><p>Love, valiant, victory.</p></h2></div>
-
-					<div id='card_52' style="display:none;">
-					<h2 class="info"><p><h2>Card 51: Two of Swords</h2></p><p>Indecision, trouble, balance.</p></h2></div>
-
-					<div id='card_53' style="display:none;">
-					<h2 class="info"><p><h2>Card 52: Three of Swords</h2></p><p>Broken relationship, civil war.</p></h2></div>
-
-					<div id='card_54' style="display:none;">
-					<h2 class="info"><p><h2>Card 53: Four of Swords</h2></p><p>Temporary exile, strife, retreat.</p></h2></div>
-
-					<div id='card_55' style="display:none;">
-					<h2 class="info"><p><h2>Card 54: Five of Swords</h2></p><p>Defeat, cowardliness, empty victory.</p></h2></div>
-
-					<div id='card_56' style="display:none;">
-					<h2 class="info"><p><h2>Card 55: Six of Swords</h2></p><p>Harmony, sorrow, journey.</p></h2></div>
-
-					<div id='card_57' style="display:none;">
-					<h2 class="info"><p><h2>Card 56: Seven of Swords</h2></p><p>Betrayal, insolence, unwise attempts.</p></h2></div>
-
-					<div id='card_58' style="display:none;">
-					<h2 class="info"><p><h2>Card 57: Eight of Swords</h2></p><p>Weakness, indecision, censure.</p></h2></div>
-
-					<div id='card_59' style="display:none;">
-					<h2 class="info"><p><h2>Card 58: Nine of Swords</h2></p><p>Desolation, illness, suspicion, cruelty.</p></h2></div>
-
-					<div id='card_60' style="display:none;">
-					<h2 class="info"><p><h2>Card 59: Ten of Swords</h2></p><p>Defeat, failure, pain.</p></h2></div>
-
-					<div id='card_61' style="display:none;">
-					<h2 class="info"><p><h2>Card 60: Page of Swords</h2></p><p>Grace, diplomacy, dexterity.</p></h2></div>
-
-					<div id='card_62' style="display:none;">
-					<h2 class="info"><p><h2>Card 61: Knight of Swords</h2></p><p>Strong man, braver, clever person.</p></h2></div>
-
-					<div id='card_63' style="display:none;">
-					<h2 class="info"><p><h2>Card 62: Queen of Swords</h2></p><p>Skillful, brave, clever, rush.</p></h2></div>
-
-					<div id='card_64' style="display:none;">
-					<h2 class="info"><p><h2>Card 63: King of Swords</h2></p><p>Powerful, friendship, counselor.</p></h2></div>
-
-					<div id='card_65' style="display:none;">
-					<h2 class="info"><p><h2>Card 64: Ace of Pentacles</h2></p><p>Prosperity, happiness, pleasure.</p></h2></div>
-
-					<div id='card_66' style="display:none;">
-					<h2 class="info"><p><h2>Card 65: Two of Pentacles</h2></p><p>Harmony, new projects, helpful.</p></h2></div>
-
-					<div id='card_67' style="display:none;">
-					<h2 class="info"><p><h2>Card 66: Three of Pentacles</h2></p><p>Abilities, approval,effort, abilities.</p></h2></div>
-
-					<div id='card_68' style="display:none;">
-					<h2 class="info"><p><h2>Card 67: Four of Pentacles</h2></p><p>Ungenerous, greed, miserly.</p></h2></div>
-
-					<div id='card_69' style="display:none;">
-					<h2 class="info"><p><h2>Card 68: Five of Pentacles</h2></p><p>Destitution, poor health, despair, loneliness.</p></h2></div>
-
-					<div id='card_70' style="display:none;">
-					<h2 class="info"><p><h2>Card 69: Six of Pentacles</h2></p><p>Prosperity, philanthropy, charity, gifts.</p></h2></div>
-
-					<div id='card_71' style="display:none;">
-					<h2 class="info"><p><h2>Card 70: Seven of Pentacles</h2></p><p>Development, re-evaluation, effort, hard work.</p></h2></div>
-
-					<div id='card_72' style="display:none;">
-					<h2 class="info"><p><h2>Card 71: Eight of Pentacles</h2></p><p>Employment, money, learning, trade.</p></h2></div>
-
-					<div id='card_73' style="display:none;">
-					<h2 class="info"><p><h2>Card 72: Nine of Pentacles</h2></p><p>Solitude, well-being, green thumb.</p></h2></div>
-
-					<div id='card_74' style="display:none;">
-					<h2 class="info"><p><h2>Card 73: Ten of Pentacles</h2></p><p>Wealth, property, stability.</p></h2></div>
-
-					<div id='card_75' style="display:none;">
-					<h2 class="info"><p><h2>Card 74: Page of Pentacles</h2></p><p>Kindness,new ideas/opinions, scholar.</p></h2></div>
-
-					<div id='card_76' style="display:none;">
-					<h2 class="info"><p><h2>Card 75: Knight of Pentacles</h2></p><p>Dull outlook, patience, animal lover, trustworthy.</p></h2></div>
-
-					<div id='card_77' style="display:none;">
-					<h2 class="info"><p><h2>Card 76: Queen of Pentacles</h2></p><p>Thoughtfulness, intelligence, talents, melancholy.</p></h2></div>
-
-					<div id='card_78' style="display:none;">
-					<h2 class="info"><p><h2>Card 77: King of Pentacles</h2></p><p>Reliable person, steadiness.</p></h2></div>
-
-					<div id='card_79' style="display:none;">
-					<h2 class="info"><p><h2>Card 0: The Fool (Reversed)</h2></p><p>Indecision, hesitation, injustice, apathy, bad choice.</p></h2>
-					</div>
-					
-					<div id='card_80' style="display:none;">
-					<h2 class="info"><p><h2>Card 1: The Magician (Reversed)</h2></p><p>Delay, unimaginative, insecurity, lack of self-confidence.</p></h2>
-					</div>
-
-					<div id='card_81' style="display:none;">
-					<h2 class="info"><p><h2>Card 2: The High Priestess (Reversed)</h2></p><p>Selfishness, shallowness, misunderstanding, ignorance.</p></h2>
-					</div>
-
-					<div id='card_82' style="display:none;">
-					<h2 class="info"><p><h2>Card 3: The Empress (Reversed)</h2></p><p>Inaction, lack on concentration, vacillation, anxiety, infidelity.</p></h2>
-					</div>
-
-					<div id='card_83' style="display:none;">
-					<h2 class="info"><p><h2>Card 4: The Emperor (Reversed)</h2></p><p>Domination, excessive control, rigidity, inflexibility.</p></h2>
-					</div>
-
-					<div id='card_84' style="display:none;">
-					<h2 class="info"><p><h2>Card 5: The Hierophant (Reversed)</h2></p><p>Vulnerability, unconventionality, foolish generosity, impotence, frailty, unorthodoxy.</p></h2>
-					</div>
-
-					<div id='card_85' style="display:none;">
-					<h2 class="info"><p><h2>Card 6: The Lovers (Reversed)</h2></p><p>Separation, frustration, unreliability, fickleness, untrustworthy.</p></h2>
-					</div>
-
-					<div id='card_86' style="display:none;">
-					<h2 class="info"><p><h2>Card 7: The Chariot (Reversed)</h2></p><p>Vanquishment, defeat, failure, unsuccessful.</p></h2>
-					</div>
-
-					<div id='card_87' style="display:none;">
-					<h2 class="info"><p><h2>Card 8: Strength (Reversed)</h2></p><p>Pettiness, sickness, unfaithfulness, weakness. </p></h2>
-					</div>
-
-
-					<div id='card_88' style="display:none;">
-					<h2 class="info"><p><h2>Card 9: The Hermit (Reversed)</h2></p><p>Hastiness, rashness,immaturity, imprudence, foolishness.</p></h2>
-					</div>
-
-					<div id='card_89' style="display:none;">
-					<h2 class="info"><p><h2>Card 10: The Wheel of Fortune (Reversed)</h2></p><p>Interruption, outside influences, failure, bad luck.</p></h2>
-					</div>
-
-					<div id='card_90' style="display:none;">
-					<h2 class="info"><p><h2>Card 11: Justice (Reversed)</h2></p><p>False accusation, unfairness, abuse, biased.</p></h2>
-					</div>
-
-					<div id='card_91' style="display:none;">
-					<h2 class="info"><p><h2>Card 12: The Hanged Man (Reversed)</h2></p><p>False prophecy, useless sacrifice, unwillingness.</p></h2>
-					</div>
-
-					<div id='card_92' style="display:none;">
-					<h2 class="info"><p><h2>Card 13: Death (Reversed)</h2></p><p>Immobility, slow changes, cheating, death, stagnation.</p></h2>
-					</div>
-
-					<div id='card_93' style="display:none;">
-					<h2 class="info"><p><h2>Card 14: Temperance (Reversed)</h2></p><p>Conflict, disunion, frustration, impatience, discord.</p></h2>
-					</div>
-
-					<div id='card_94' style="display:none;">
-					<h2 class="info"><p><h2>Card 15: The Devil (Reversed)</h2></p><p>Release, enlightenment, divorce, recovery.</p></h2>
-					</div>
-
-					<div id='card_95' style="display:none;">
-					<h2 class="info"><p><h2>Card 16: The Tower (Reversed)</h2></p><p>Entrapment, imprisonment, old ways, rustic.</p></h2>
-					</div>
-
-					<div id='card_96' style="display:none;">
-					<h2 class="info"><p><h2>Card 17: The Star (Reversed)</h2></p><p>Disappointment, bad luck, imbalance, broken dreams.</p></h2>
-					</div>
-
-					<div id='card_97' style="display:none;">
-					<h2 class="info"><p><h2>Card 18: The Moon (Reversed)</h2></p><p>Trifling mistakes, deception discovered, negative advantage.</p></h2>
-					</div>
-
-					<div id='card_98' style="display:none;">
-					<h2 class="info"><p><h2>Card 19: The Sun (Reversed)</h2></p><p>Loneliness, canceled plans, unhappiness, break ups.</p></h2>
-					</div>
-
-					<div id='card_99' style="display:none;">
-					<h2 class="info"><p><h2>Card 20: Judgement (Reversed)</h2></p><p>Disappointment, indecision, death, failure, ill-health, theft, worry.</p></h2>
-					</div>
-
-					<div id='card_100' style="display:none;">
-					<h2 class="info"><p><h2>Card 21: The World (Reversed)</h2></p><p>Lack of vision, disappointment, imperfection.</p></h2>
-					</div>
-
-					<div id='card_101' style="display:none;">
-					<h2 class="info"><p><h2>Card 22: Ace of Wands (Reversed)</h2></p><p>Selfishness, lack of determination, setback.</p></h2>
-					</div>
-
-					<div id='card_102' style="display:none;">
-					<h2 class="info"><p><h2>Card 23: Two of Wands (Reversed)</h2></p><p>Impatience, domination.</p></h2>
-					</div>
-
-					<div id='card_103' style="display:none;">
-					<h2 class="info"><p><h2>Card 24: Three of Wands (Reversed)</h2></p><p>Carelessness, arrogance, pride, mistakes.</p></h2>
-					</div>
-
-					<div id='card_104' style="display:none;">
-					<h2 class="info"><p><h2>Card 25: Four of Wands (Reversed)</h2></p><p>New relationship, new ambitions, action.</p></h2>
-					</div>
-
-					<div id='card_105' style="display:none;">
-					<h2 class="info"><p><h2>Card 26: Five of Wands (Reversed)</h2></p><p>New opportunities, harmony, generosity.</p></h2>
-					</div>
-
-					<div id='card_106' style="display:none;">
-					<h2 class="info"><p><h2>Card 27: Six of Wands (Reversed)</h2></p><p>Postponement, bad news, pride in riches.</p></h2>
-					</div>
-
-					<div id='card_107' style="display:none;">
-					<h2 class="info"><p><h2>Card 28: Seven of Wands (Reversed)</h2></p><p>Advantage, patience, indecision.</p></h2>
-					</div>
-
-					<div id='card_108' style="display:none;">
-					<h2 class="info"><p><h2>Card 29: Eight of Wands (Reversed)</h2></p><p>Violence, quarrels, courage.</p></h2>
-					</div>
-
-					<div id='card_109' style="display:none;">
-					<h2 class="info"><p><h2>Card 30: Nine of Wands (Reversed)</h2></p><p>Weakness, ill-health, adversity.</p></h2>
-					</div>
-
-					<div id='card_110' style="display:none;">
-					<h2 class="info"><p><h2>Card 31: Ten of Wands (Reversed)</h2></p><p>Cleverness, energy, strength.</p></h2>
-					</div>
-
-					<div id='card_111' style="display:none;">
-					<h2 class="info"><p><h2>Card 32: Page of Wands (Reversed)</h2></p><p>Setbacks to new ideas, pessimism, lack of direction.</p></h2>
-					</div>
-
-					<div id='card_112' style="display:none;">
-					<h2 class="info"><p><h2>Card 33: Knight of Wands (Reversed)</h2></p><p>Suspicion, jealousy, narrow-mindedness.</p></h2>
-					</div>
-
-					<div id='card_113' style="display:none;">
-					<h2 class="info"><p><h2>Card 34: Queen of Wands (Reversed)</h2></p><p>Jealous, revengeful, infidelity.</p></h2>
-					</div>
-
-					<div id='card_114' style="display:none;">
-					<h2 class="info"><p><h2>Card 35: King of Wands (Reversed)</h2></p><p>Unyielding, prejudice, quarrels.</p></h2>
-					</div>
-
-					<div id='card_115' style="display:none;">
-					<h2 class="info"><p><h2>Card 36: Ace of Cups (Reversed)</h2></p><p>Egotism, selfishness, hesitancy.</p></h2>
-					</div>
-
-					<div id='card_116' style="display:none;">
-					<h2 class="info"><p><h2>Card 37: Two of Cups (Reversed)</h2></p><p>Violent passion, misunderstanding.</p></h2>
-					</div>
-
-					<div id='card_117' style="display:none;">
-					<h2 class="info"><p><h2>Card 38: Three of Cups (Reversed)</h2></p><p>Hidden, overindulgence, pain, gossip.</p></h2>
-					</div>
-
-					<div id='card_118' style="display:none;">
-					<h2 class="info"><p><h2>Card 39: Four of Cups (Reversed)</h2></p><p>New goals, ambitions, beginning.</p></h2>
-					</div>
-
-					<div id='card_119' style="display:none;">
-					<h2 class="info"><p><h2>Card 40: Five of Cups (Reversed)</h2></p><p>Return, summon, hope.</p></h2>
-					</div>
-
-					<div id='card_120' style="display:none;">
-					<h2 class="info"><p><h2>Card 41: Six of Cups (Reversed)</h2></p><p>Friendship, disappointment, past.</p></h2></div>
-
-					<div id='card_121' style="display:none;">
-					<h2 class="info"><p><h2>Card 42: Seven of Cups (Reversed)</h2></p><p>Will-power, determination.</p></h2></div>
-
-					<div id='card_122' style="display:none;">
-					<h2 class="info"><p><h2>Card 43: Eight of Cups (Reversed)</h2></p><p>Pleasure, success, joy.</p></h2></div>
-
-					<div id='card_123' style="display:none;">
-					<h2 class="info"><p><h2>Card 44: Nine of Cups (Reversed)</h2></p><p>Illness, failure, overindulgence.</p></h2></div>
-
-					<div id='card_124' style="display:none;">
-					<h2 class="info"><p><h2>Card 45: Ten of Cups (Reversed)</h2></p><p>Waste, broken relationships, quarrel.</p></h2></div>
-
-					<div id='card_125' style="display:none;">
-					<h2 class="info"><p><h2>Card 46: Page of Cups (Reversed)</h2></p><p>Poor imagination, selfishness, no desires.</p></h2></div>
-
-					<div id='card_126' style="display:none;">
-					<h2 class="info"><p><h2>Card 47: Knight of Cups (Reversed)</h2></p><p>Idleness, untruthful, fraud, sensuality.</p></h2></div>
-
-					<div id='card_127' style="display:none;">
-					<h2 class="info"><p><h2>Card 48: Queen of Cups (Reversed)</h2></p><p>Perverse, unhappy, gloom, over-active imagination.</p></h2></div>
-
-					<div id='card_128' style="display:none;">
-					<h2 class="info"><p><h2>Card 49: King of Cups (Reversed)</h2></p><p>Double-dealer, scandal, crafty, violent.</p></h2></div>
-
-					<div id='card_129' style="display:none;">
-					<h2 class="info"><p><h2>Card 50: Ace of Swords (Reversed)</h2></p><p>Obstacles, tyranny, power.</p></h2></div>
-
-					<div id='card_130' style="display:none;">
-					<h2 class="info"><p><h2>Card 51: Two of Swords (Reversed)</h2></p><p>Unscrupulous, release.</p></h2></div>
-
-					<div id='card_131' style="display:none;">
-					<h2 class="info"><p><h2>Card 52: Three of Swords (Reversed)</h2></p><p>Sorrow, loss, confusion.</p></h2></div>
-
-					<div id='card_132' style="display:none;">
-					<h2 class="info"><p><h2>Card 53: Four of Swords (Reversed)</h2></p><p>Social unrest, labor strikes, renewed activity.</p></h2></div>
-
-					<div id='card_133' style="display:none;">
-					<h2 class="info"><p><h2>Card 54: Five of Swords (Reversed)</h2></p><p>Unfairness, defeat, loss.</p></h2></div>
-
-					<div id='card_134' style="display:none;">
-					<h2 class="info"><p><h2>Card 55: Six of Swords (Reversed)</h2></p><p>Obstacles, difficulties, defeat.</p></h2></div>
-
-					<div id='card_135' style="display:none;">
-					<h2 class="info"><p><h2>Card 56: Seven of Swords (Reversed)</h2></p><p>Counsel, helpful, advice.</p></h2></div>
-
-					<div id='card_136' style="display:none;">
-					<h2 class="info"><p><h2>Card 57: Eight of Swords (Reversed)</h2></p><p>Freedom, new beginnings, relaxation.</p></h2></div>
-
-					<div id='card_137' style="display:none;">
-					<h2 class="info"><p><h2>Card 58: Nine of Swords (Reversed)</h2></p><p>Unselfishness, good news, healing.</p></h2></div>
-
-					<div id='card_138' style="display:none;">
-					<h2 class="info"><p><h2>Card 59: Ten of Swords (Reversed)</h2></p><p>Courage, positive energy, good health.</p></h2></div>
-
-					<div id='card_139' style="display:none;">
-					<h2 class="info"><p><h2>Card 60: Page of Swords (Reversed)</h2></p><p>Imposture, ill-health, cunningness.</p></h2></div>
-
-					<div id='card_140' style="display:none;">
-					<h2 class="info"><p><h2>Card 61: Knight of Swords (Reversed)</h2></p><p>Troublemaker, a crafty, tyranny.</p></h2></div>
-
-					<div id='card_141' style="display:none;">
-					<h2 class="info"><p><h2>Card 62: Queen of Swords (Reversed)</h2></p><p>Sly, keen, deceitful.</p></h2></div>
-
-					<div id='card_142' style="display:none;">
-					<h2 class="info"><p><h2>Card 63: King of Swords (Reversed)</h2></p><p>Obstinate, evil intentions, judgment.</p></h2></div>
-
-					<div id='card_143' style="display:none;">
-					<h2 class="info"><p><h2>Card 64: Ace of Pentacles (Reversed)</h2></p><p>Misery, greedy, money.</p></h2></div>
-
-					<div id='card_144' style="display:none;">
-					<h2 class="info"><p><h2>Card 65: Two of Pentacles (Reversed)</h2></p><p>Difficulty, discouragement.</p></h2></div>
-
-					<div id='card_145' style="display:none;">
-					<h2 class="info"><p><h2>Card 66: Three of Pentacles (Reversed)</h2></p><p>Preoccupation, ambitions.</p></h2></div>
-
-					<div id='card_146' style="display:none;">
-					<h2 class="info"><p><h2>Card 67: Four of Pentacles (Reversed)</h2></p><p>Spendthrift, obstacles, earthy possessions.</p></h2></div>
-
-					<div id='card_147' style="display:none;">
-					<h2 class="info"><p><h2>Card 68: Five of Pentacles (Reversed)</h2></p><p>Employment, courage, revival.</p></h2></div>
-
-					<div id='card_148' style="display:none;">
-					<h2 class="info"><p><h2>Card 69: Six of Pentacles (Reversed)</h2></p><p>Jealousy, miserliness, unfairness.</p></h2></div>
-
-					<div id='card_149' style="display:none;">
-					<h2 class="info"><p><h2>Card 70: Seven of Pentacles (Reversed)</h2></p><p>Impatience, slow progress, investments.</p></h2></div>
-
-					<div id='card_150' style="display:none;">
-					<h2 class="info"><p><h2>Card 71: Eight of Pentacles (Reversed)</h2></p><p>Void, no ambition, dislike.</p></h2></div>
-
-					<div id='card_151' style="display:none;">
-					<h2 class="info"><p><h2>Card 72: Nine of Pentacles (Reversed)</h2></p><p>Caution, possible loss.</p></h2></div>
-
-					<div id='card_152' style="display:none;">
-					<h2 class="info"><p><h2>Card 73: Ten of Pentacles (Reversed)</h2></p><p>Dull, slothfulness, misfortune.</p></h2></div>
-
-					<div id='card_153' style="display:none;">
-					<h2 class="info"><p><h2>Card 74: Page of Pentacles (Reversed)</h2></p><p>Luxury, rebellious, bad news.</p></h2></div>
-
-					<div id='card_154' style="display:none;">
-					<h2 class="info"><p><h2>Card 75: Knight of Pentacles (Reversed)</h2></p><p>Carelessness, standstill, irresponsible.</p></h2></div>
-
-					<div id='card_155' style="display:none;">
-					<h2 class="info"><p><h2>Card 76: Queen of Pentacles (Reversed)</h2></p><p>Mistrust, suspicion, neglect.</p></h2></div>
-
-					<div id='card_156' style="display:none;">
-					<h2 class="info"><p><h2>Card 77: King of Pentacles (Reversed)</h2></p><p>ribes, materialistic, calm.</p></h2></div>
-
-				</div>
-				<div class="width-1-12-m width-1-12" id="selectOneCb">
-				</div>
-
-				<div class="width-1-12-m width-1-12" id="selectOneCb">
-				</div>
-				<div class="width-3-12-m width-3-12" id="selectTh" style="display:none;">
+				<div class="width-4-12-m width-4-12" id="selectThA" style="display:none;">
 					<div class = "reverseA">
 						<div class = "cardA">
 							<div class = "front">
@@ -642,9 +74,13 @@ explore page to learn about all cards (make images into links), linked on indivi
 							</div>
 						</div>
 					</div>
+
+					<div class="fade-in"><p class="info" id="info1">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
+					<button class="button" id="flip1" style="display:block;">Shuffle</button>
+					</div>
 				</div>
 
-				<div class="width-3-12-m width-3-12" id="selectThA" style="display:none;">
+				<div class="width-4-12-m width-4-12" id="selectThB" style="display:none;">
 					<div class = "reverseB">
 						<div class = "cardB">
 							<div class = "front">
@@ -655,9 +91,12 @@ explore page to learn about all cards (make images into links), linked on indivi
 							</div>
 						</div>
 					</div>
+					<div class="fade-in"><p class="info" id="info2">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
+					<button class="button" id="flip2" style="display:block;">Shuffle</button>
+					</div>
 				</div>
 
-				<div class="width-3-12-m width-3-12" id="selectThB" style="display:none;">
+				<div class="width-4-12-m width-4-12" id="selectThC" style="display:none;">
 					<div class = "reverseC">
 						<div class = "cardC">
 							<div class = "front">
@@ -668,32 +107,489 @@ explore page to learn about all cards (make images into links), linked on indivi
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="width-3-12-m width-3-12" id="selectThC" style="display:none;">
-					<div class="fade-in"><p class="info" id="info1">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
-					<button class="button" id="flip1" style="display:block;">Shuffle</button></div>
-				</div>
-				<div class="width-1-12-m width-1-12" id="selectOneCb">
-				</div>
-
-				<div class="width-3-12-m width-3-12" id="selectThD"style="display:none;">
-					<div class="fade-in"><p class="info" id="info2">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
-					<button class="button" id="flip2" style="display:block;">Shuffle</button></div>
-				</div>
-				<div class="width-1-12-m width-1-12" id="selectOneCb">
-				</div>
-
-				<div class="width-3-12-m width-3-12" id="selectThE"style="display:none;">
 					<div class="fade-in"><p class="info" id="info3">Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
-					<button class="button" id="flip3" style="display:block;">Shuffle</button></div>
+					<button class="button" id="flip3" style="display:block;" onClick="rotateImage(360);">Shuffle</button>
+					</div>
 				</div>
+
+					<div class="width-4-12-m width-4-12" id="selectOneCa" style="display:none;">
+					<p>Tap the <i>Shuffle</i> button below to shuffle the cards as many times as you like, and when you're ready, select the pile to flip the card over.</p>
+					<button class="button" id="flip" style="display:block;">Shuffle</button></div>
+
+					<div class="width-4-12-m width-4-12" id='card_1' style="display:none;">
+					<h2 class="info"><p><h2>Card 0: The Fool</h2></p><p>Beginnings, possibilities, pleasure, thoughtlessness, adventure, opportunity.</p></div>
+					
+					<div class="width-4-12-m width-4-12" id='card_2' style="display:none;">
+					<h2 class="info"><p><h2>Card 1: The Magician</h2></p><p>Creativity, self-confidence, dexterity, sleight of hand, will-power, skill.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_3' style="display:none;">
+					<h2 class="info"><p><h2>Card 2: The High Priestess</h2></p><p>Knowledge, wisdom, learning, intuition, impatience, virtue, purity.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_4' style="display:none;">
+					<h2 class="info"><p><h2>Card 3: The Empress</h2></p><p>Development, accomplishment action, evolution.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_5' style="display:none;">
+					<h2 class="info"><p><h2>Card 4: The Emperor</h2></p><p>Authority, father-figure, structure, solid foundation.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_6' style="display:none;">
+					<h2 class="info"><p><h2>Card 5: The Hierophant</h2></p><p>Mercy, conformity, forgiveness, social approval, bonding, inspiration.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_7' style="display:none;">
+					<h2 class="info"><p><h2>Card 6: The Lovers</h2></p><p>Harmony, trust,romance, optimism, honor, love, harmony.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_8' style="display:none;">
+					<h2 class="info"><p><h2>Card 7: The Chariot</h2></p><p>Perseverance, rushed decision, turmoil, vengeance, adversity.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_9' style="display:none;">
+					<h2 class="info"><p><h2>Card 8: Strength</h2></p><p>Courage, conviction, strength, determination, action, heroism, virility. </p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_10' style="display:none;">
+					<h2 class="info"><p><h2>Card 9: The Hermit</h2></p><p>Inner strength, prudence, withdrawal, caution, vigilance.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_11' style="display:none;">
+					<h2 class="info"><p><h2>Card 10: The Wheel of Fortune</h2></p><p>Unexpected events, advancement, destiny, fortune, progress.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_12' style="display:none;">
+					<h2 class="info"><p><h2>Card 11: Justice</h2></p><p>Equality, righteousness, virtue, honor, harmony, balance.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_13' style="display:none;">
+					<h2 class="info"><p><h2>Card 12: The Hanged Man</h2></p><p>Change, reversal, boredom, improvement, rebirth, suspension, change.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_14' style="display:none;">
+					<h2 class="info"><p><h2>Card 13: Death</h2></p><p>Unexpected change, loss, failure, transformation, death, bad luck.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_15' style="display:none;">
+					<h2 class="info"><p><h2>Card 14: Temperance</h2></p><p>Temperance, patience, good influence, confidence, moderation.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_16' style="display:none;">
+					<h2 class="info"><p><h2>Card 15: The Devil</h2></p><p>Downfall, unexpected failure, controversy, ravage, disaster, ill temper.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_17' style="display:none;">
+					<h2 class="info"><p><h2>Card 16: The Tower</h2></p><p>Disruption, abandonment, end of friendship, bankruptcy, downfall, unexpected events.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_18' style="display:none;">
+					<h2 class="info"><p><h2>Card 17: The Star</h2></p><p>Balance, pleasure, optimism, insight, spiritual love, hope, faith.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_19' style="display:none;">
+					<h2 class="info"><p><h2>Card 18: The Moon</h2></p><p>Double-dealing, deception, disillusionment, trickery, error, danger, disgrace.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_20' style="display:none;">
+					<h2 class="info"><p><h2>Card 19: The Sun</h2></p><p>Accomplishment, success, love, joy, happy marriage, satisfaction.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_21' style="display:none;">
+					<h2 class="info"><p><h2>Card 20: Judgement</h2></p><p>Awakening, renewal, rejuvenation, rebirth, improvement, promotion, atonement, judgment.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_22' style="display:none;">
+					<h2 class="info"><p><h2>Card 21: The World</h2></p><p>Perfection, recognition, success, fulfillment, eternal life.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_23' style="display:none;">
+					<h2 class="info"><p><h2>Card 22: Ace of Wands</h2></p><p>Profitable journey, new business, beginning, new career, birth, inheritance.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_24' style="display:none;">
+					<h2 class="info"><p><h2>Card 23: Two of Wands</h2></p><p>Generous person, courage, patience, courage.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_25' style="display:none;">
+					<h2 class="info"><p><h2>Card 24: Three of Wands</h2></p><p>Cooperation, good partnership, success.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_26' style="display:none;">
+					<h2 class="info"><p><h2>Card 25: Four of Wands</h2></p><p>Dissatisfaction, kindness, reevaluation.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_27' style="display:none;">
+					<h2 class="info"><p><h2>Card 26: Five of Wands</h2></p><p>Lawsuit or quarrel, courage, competition.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_28' style="display:none;">
+					<h2 class="info"><p><h2>Card 27: Six of Wands</h2></p><p>Leadership, good news, success.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_29' style="display:none;">
+					<h2 class="info"><p><h2>Card 28: Seven of Wands</h2></p><p>Stiff competition, victory, courage, energy.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_30' style="display:none;">
+					<h2 class="info"><p><h2>Card 29: Eight of Wands</h2></p><p>New ideas, love, journey.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_31' style="display:none;">
+					<h2 class="info"><p><h2>Card 30: Nine of Wands</h2></p><p>Victory, good health, stubbornness.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_32' style="display:none;">
+					<h2 class="info"><p><h2>Card 31: Ten of Wands</h2></p><p>Pain, ruin, failure.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_33' style="display:none;">
+					<h2 class="info"><p><h2>Card 32: Page of Wands</h2></p><p>Enthusiasm, exploration, discovery, free spirit.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_34' style="display:none;">
+					<h2 class="info"><p><h2>Card 33: Knight of Wands</h2></p><p>Generous, journey, impetuous.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_35' style="display:none;">
+					<h2 class="info"><p><h2>Card 34: Queen of Wands</h2></p><p>Fondness, attraction, command.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_36' style="display:none;">
+					<h2 class="info"><p><h2>Card 35: King of Wands</h2></p><p>Passionate, good leader, noble.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_37' style="display:none;">
+					<h2 class="info"><p><h2>Card 36: Ace of Cups</h2></p><p>Good health, love, joy, beauty.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_38' style="display:none;">
+					<h2 class="info"><p><h2>Card 37: Two of Cups</h2></p><p>Romance, friendship, cooperation.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_39' style="display:none;">
+					<h2 class="info"><p><h2>Card 38: Three of Cups</h2></p><p>Fortune, hospitality, discovery.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_40' style="display:none;">
+					<h2 class="info"><p><h2>Card 39: Four of Cups</h2></p><p>Dissatisfaction, kindness, reevaluation, redemption.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_41' style="display:none;">
+					<h2 class="info"><p><h2>Card 40: Five of Cups</h2></p><p>Broken marriage, vanity, regret, sorrow, loss.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_42' style="display:none;">
+					<h2 class="info"><p><h2>Card 41: Six of Cups</h2></p><p>Acquaintance, good memories, acquaintance, happiness.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_43' style="display:none;">
+					<h2 class="info"><p><h2>Card 42: Seven of Cups</h2></p><p>Imagination, illusion, directionless.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_44' style="display:none;">
+					<h2 class="info"><p><h2>Card 43: Eight of Cups</h2></p><p>Disappointment, abandonment, misery.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_45' style="display:none;">
+					<h2 class="info"><p><h2>Card 44: Nine of Cups</h2></p><p>Physical well-being, hopes, security.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_46' style="display:none;">
+					<h2 class="info"><p><h2>Card 45: Ten of Cups</h2></p><p>Friendship, happiness, life.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_47' style="display:none;">
+					<h2 class="info"><p><h2>Card 46: Page of Cups</h2></p><p>Sweetness, interest in literature, gentleness.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_48' style="display:none;">
+					<h2 class="info"><p><h2>Card 47: Knight of Cups</h2></p><p>Emotional, romantic dreamer, intelligence.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_49' style="display:none;">
+					<h2 class="info"><p><h2>Card 48: Queen of Cups</h2></p><p>Loving mother, gentle, happiness.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_50' style="display:none;">
+					<h2 class="info"><p><h2>Card 49: King of Cups</h2></p><p>Kindness, willingness, enjoyment.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_51' style="display:none;">
+					<h2 class="info"><p><h2>Card 50: Ace of Swords</h2></p><p>Love, valiant, victory.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_52' style="display:none;">
+					<h2 class="info"><p><h2>Card 51: Two of Swords</h2></p><p>Indecision, trouble, balance.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_53' style="display:none;">
+					<h2 class="info"><p><h2>Card 52: Three of Swords</h2></p><p>Broken relationship, civil war.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_54' style="display:none;">
+					<h2 class="info"><p><h2>Card 53: Four of Swords</h2></p><p>Temporary exile, strife, retreat.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_55' style="display:none;">
+					<h2 class="info"><p><h2>Card 54: Five of Swords</h2></p><p>Defeat, cowardliness, empty victory.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_56' style="display:none;">
+					<h2 class="info"><p><h2>Card 55: Six of Swords</h2></p><p>Harmony, sorrow, journey.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_57' style="display:none;">
+					<h2 class="info"><p><h2>Card 56: Seven of Swords</h2></p><p>Betrayal, insolence, unwise attempts.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_58' style="display:none;">
+					<h2 class="info"><p><h2>Card 57: Eight of Swords</h2></p><p>Weakness, indecision, censure.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_59' style="display:none;">
+					<h2 class="info"><p><h2>Card 58: Nine of Swords</h2></p><p>Desolation, illness, suspicion, cruelty.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_60' style="display:none;">
+					<h2 class="info"><p><h2>Card 59: Ten of Swords</h2></p><p>Defeat, failure, pain.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_61' style="display:none;">
+					<h2 class="info"><p><h2>Card 60: Page of Swords</h2></p><p>Grace, diplomacy, dexterity.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_62' style="display:none;">
+					<h2 class="info"><p><h2>Card 61: Knight of Swords</h2></p><p>Strength, bravery, cleverness.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_63' style="display:none;">
+					<h2 class="info"><p><h2>Card 62: Queen of Swords</h2></p><p>Skillful, brave, clever, rush.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_64' style="display:none;">
+					<h2 class="info"><p><h2>Card 63: King of Swords</h2></p><p>Powerful, friendship, counselor.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_65' style="display:none;">
+					<h2 class="info"><p><h2>Card 64: Ace of Pentacles</h2></p><p>Prosperity, happiness, pleasure.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_66' style="display:none;">
+					<h2 class="info"><p><h2>Card 65: Two of Pentacles</h2></p><p>Harmony, new projects, helpful.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_67' style="display:none;">
+					<h2 class="info"><p><h2>Card 66: Three of Pentacles</h2></p><p>Abilities, approval,effort, abilities.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_68' style="display:none;">
+					<h2 class="info"><p><h2>Card 67: Four of Pentacles</h2></p><p>Ungenerous, greed, miserly.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_69' style="display:none;">
+					<h2 class="info"><p><h2>Card 68: Five of Pentacles</h2></p><p>Destitution, poor health, despair, loneliness.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_70' style="display:none;">
+					<h2 class="info"><p><h2>Card 69: Six of Pentacles</h2></p><p>Prosperity, philanthropy, charity, gifts.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_71' style="display:none;">
+					<h2 class="info"><p><h2>Card 70: Seven of Pentacles</h2></p><p>Development, re-evaluation, effort, hard work.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_72' style="display:none;">
+					<h2 class="info"><p><h2>Card 71: Eight of Pentacles</h2></p><p>Employment, money, learning, trade.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_73' style="display:none;">
+					<h2 class="info"><p><h2>Card 72: Nine of Pentacles</h2></p><p>Solitude, well-being, green thumb.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_74' style="display:none;">
+					<h2 class="info"><p><h2>Card 73: Ten of Pentacles</h2></p><p>Wealth, property, stability.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_75' style="display:none;">
+					<h2 class="info"><p><h2>Card 74: Page of Pentacles</h2></p><p>Kindness,new ideas/opinions, scholar.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_76' style="display:none;">
+					<h2 class="info"><p><h2>Card 75: Knight of Pentacles</h2></p><p>Dull outlook, patience, animal lover, trustworthy.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_77' style="display:none;">
+					<h2 class="info"><p><h2>Card 76: Queen of Pentacles</h2></p><p>Thoughtfulness, intelligence, talents, melancholy.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_78' style="display:none;">
+					<h2 class="info"><p><h2>Card 77: King of Pentacles</h2></p><p>Reliable person, steadiness.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_79' style="display:none;">
+					<h2 class="info"><p><h2>Card 0: The Fool (Reversed)</h2></p><p>Indecision, hesitation, injustice, apathy, bad choice.</p></div>
+					
+					<div class="width-4-12-m width-4-12" id='card_80' style="display:none;">
+					<h2 class="info"><p><h2>Card 1: The Magician (Reversed)</h2></p><p>Delay, unimaginative, insecurity, lack of self-confidence.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_81' style="display:none;">
+					<h2 class="info"><p><h2>Card 2: The High Priestess (Reversed)</h2></p><p>Selfishness, shallowness, misunderstanding, ignorance.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_82' style="display:none;">
+					<h2 class="info"><p><h2>Card 3: The Empress (Reversed)</h2></p><p>Inaction, lack on concentration, vacillation, anxiety, infidelity.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_83' style="display:none;">
+					<h2 class="info"><p><h2>Card 4: The Emperor (Reversed)</h2></p><p>Domination, excessive control, rigidity, inflexibility.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_84' style="display:none;">
+					<h2 class="info"><p><h2>Card 5: The Hierophant (Reversed)</h2></p><p>Vulnerability, unconventionality, foolish generosity, impotence, frailty, unorthodoxy.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_85' style="display:none;">
+					<h2 class="info"><p><h2>Card 6: The Lovers (Reversed)</h2></p><p>Separation, frustration, unreliability, fickleness, untrustworthy.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_86' style="display:none;">
+					<h2 class="info"><p><h2>Card 7: The Chariot (Reversed)</h2></p><p>Vanquishment, defeat, failure, unsuccessful.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_87' style="display:none;">
+					<h2 class="info"><p><h2>Card 8: Strength (Reversed)</h2></p><p>Pettiness, sickness, unfaithfulness, weakness.</p></div>
+
+
+					<div class="width-4-12-m width-4-12" id='card_88' style="display:none;">
+					<h2 class="info"><p><h2>Card 9: The Hermit (Reversed)</h2></p><p>Hastiness, rashness,immaturity, imprudence, foolishness.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_89' style="display:none;">
+					<h2 class="info"><p><h2>Card 10: The Wheel of Fortune (Reversed)</h2></p><p>Interruption, outside influences, failure, bad luck.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_90' style="display:none;">
+					<h2 class="info"><p><h2>Card 11: Justice (Reversed)</h2></p><p>False accusation, unfairness, abuse, biased.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_91' style="display:none;">
+					<h2 class="info"><p><h2>Card 12: The Hanged Man (Reversed)</h2></p><p>False prophecy, useless sacrifice, unwillingness.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_92' style="display:none;">
+					<h2 class="info"><p><h2>Card 13: Death (Reversed)</h2></p><p>Immobility, slow changes, cheating, death, stagnation.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_93' style="display:none;">
+					<h2 class="info"><p><h2>Card 14: Temperance (Reversed)</h2></p><p>Conflict, disunion, frustration, impatience, discord.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_94' style="display:none;">
+					<h2 class="info"><p><h2>Card 15: The Devil (Reversed)</h2></p><p>Release, enlightenment, divorce, recovery.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_95' style="display:none;">
+					<h2 class="info"><p><h2>Card 16: The Tower (Reversed)</h2></p><p>Entrapment, imprisonment, old ways, rustic.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_96' style="display:none;">
+					<h2 class="info"><p><h2>Card 17: The Star (Reversed)</h2></p><p>Disappointment, bad luck, imbalance, broken dreams.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_97' style="display:none;">
+					<h2 class="info"><p><h2>Card 18: The Moon (Reversed)</h2></p><p>Trifling mistakes, deception discovered, negative advantage.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_98' style="display:none;">
+					<h2 class="info"><p><h2>Card 19: The Sun (Reversed)</h2></p><p>Loneliness, canceled plans, unhappiness, break ups.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_99' style="display:none;">
+					<h2 class="info"><p><h2>Card 20: Judgement (Reversed)</h2></p><p>Disappointment, indecision, death, failure, ill-health, theft, worry.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_100' style="display:none;">
+					<h2 class="info"><p><h2>Card 21: The World (Reversed)</h2></p><p>Lack of vision, disappointment, imperfection.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_101' style="display:none;">
+					<h2 class="info"><p><h2>Card 22: Ace of Wands (Reversed)</h2></p><p>Selfishness, lack of determination, setback.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_102' style="display:none;">
+					<h2 class="info"><p><h2>Card 23: Two of Wands (Reversed)</h2></p><p>Impatience, domination.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_103' style="display:none;">
+					<h2 class="info"><p><h2>Card 24: Three of Wands (Reversed)</h2></p><p>Carelessness, arrogance, pride, mistakes.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_104' style="display:none;">
+					<h2 class="info"><p><h2>Card 25: Four of Wands (Reversed)</h2></p><p>New relationship, new ambitions, action.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_105' style="display:none;">
+					<h2 class="info"><p><h2>Card 26: Five of Wands (Reversed)</h2></p><p>New opportunities, harmony, generosity.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_106' style="display:none;">
+					<h2 class="info"><p><h2>Card 27: Six of Wands (Reversed)</h2></p><p>Postponement, bad news, pride in riches.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_107' style="display:none;">
+					<h2 class="info"><p><h2>Card 28: Seven of Wands (Reversed)</h2></p><p>Advantage, patience, indecision.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_108' style="display:none;">
+					<h2 class="info"><p><h2>Card 29: Eight of Wands (Reversed)</h2></p><p>Violence, quarrels, courage.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_109' style="display:none;">
+					<h2 class="info"><p><h2>Card 30: Nine of Wands (Reversed)</h2></p><p>Weakness, ill-health, adversity.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_110' style="display:none;">
+					<h2 class="info"><p><h2>Card 31: Ten of Wands (Reversed)</h2></p><p>Cleverness, energy, strength.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_111' style="display:none;">
+					<h2 class="info"><p><h2>Card 32: Page of Wands (Reversed)</h2></p><p>Setbacks to new ideas, pessimism, lack of direction.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_112' style="display:none;">
+					<h2 class="info"><p><h2>Card 33: Knight of Wands (Reversed)</h2></p><p>Suspicion, jealousy, narrow-mindedness.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_113' style="display:none;">
+					<h2 class="info"><p><h2>Card 34: Queen of Wands (Reversed)</h2></p><p>Jealous, revengeful, infidelity.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_114' style="display:none;">
+					<h2 class="info"><p><h2>Card 35: King of Wands (Reversed)</h2></p><p>Unyielding, prejudice, quarrels.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_115' style="display:none;">
+					<h2 class="info"><p><h2>Card 36: Ace of Cups (Reversed)</h2></p><p>Egotism, selfishness, hesitancy.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_116' style="display:none;">
+					<h2 class="info"><p><h2>Card 37: Two of Cups (Reversed)</h2></p><p>Violent passion, misunderstanding.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_117' style="display:none;">
+					<h2 class="info"><p><h2>Card 38: Three of Cups (Reversed)</h2></p><p>Hidden, overindulgence, pain, gossip.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_118' style="display:none;">
+					<h2 class="info"><p><h2>Card 39: Four of Cups (Reversed)</h2></p><p>New goals, ambitions, beginning.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_119' style="display:none;">
+					<h2 class="info"><p><h2>Card 40: Five of Cups (Reversed)</h2></p><p>Return, summon, hope.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_120' style="display:none;">
+					<h2 class="info"><p><h2>Card 41: Six of Cups (Reversed)</h2></p><p>Friendship, disappointment, past.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_121' style="display:none;">
+					<h2 class="info"><p><h2>Card 42: Seven of Cups (Reversed)</h2></p><p>Will-power, determination.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_122' style="display:none;">
+					<h2 class="info"><p><h2>Card 43: Eight of Cups (Reversed)</h2></p><p>Pleasure, success, joy.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_123' style="display:none;">
+					<h2 class="info"><p><h2>Card 44: Nine of Cups (Reversed)</h2></p><p>Illness, failure, overindulgence.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_124' style="display:none;">
+					<h2 class="info"><p><h2>Card 45: Ten of Cups (Reversed)</h2></p><p>Waste, broken relationships, quarrel.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_125' style="display:none;">
+					<h2 class="info"><p><h2>Card 46: Page of Cups (Reversed)</h2></p><p>Poor imagination, selfishness, no desires.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_126' style="display:none;">
+					<h2 class="info"><p><h2>Card 47: Knight of Cups (Reversed)</h2></p><p>Idleness, untruthful, fraud, sensuality.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_127' style="display:none;">
+					<h2 class="info"><p><h2>Card 48: Queen of Cups (Reversed)</h2></p><p>Perverse, unhappy, gloom, over-active imagination.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_128' style="display:none;">
+					<h2 class="info"><p><h2>Card 49: King of Cups (Reversed)</h2></p><p>Double-dealer, scandal, crafty, violent.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_129' style="display:none;">
+					<h2 class="info"><p><h2>Card 50: Ace of Swords (Reversed)</h2></p><p>Obstacles, tyranny, power.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_130' style="display:none;">
+					<h2 class="info"><p><h2>Card 51: Two of Swords (Reversed)</h2></p><p>Unscrupulous, release.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_131' style="display:none;">
+					<h2 class="info"><p><h2>Card 52: Three of Swords (Reversed)</h2></p><p>Sorrow, loss, confusion.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_132' style="display:none;">
+					<h2 class="info"><p><h2>Card 53: Four of Swords (Reversed)</h2></p><p>Social unrest, labor strikes, renewed activity.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_133' style="display:none;">
+					<h2 class="info"><p><h2>Card 54: Five of Swords (Reversed)</h2></p><p>Unfairness, defeat, loss.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_134' style="display:none;">
+					<h2 class="info"><p><h2>Card 55: Six of Swords (Reversed)</h2></p><p>Obstacles, difficulties, defeat.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_135' style="display:none;">
+					<h2 class="info"><p><h2>Card 56: Seven of Swords (Reversed)</h2></p><p>Counsel, helpful, advice.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_136' style="display:none;">
+					<h2 class="info"><p><h2>Card 57: Eight of Swords (Reversed)</h2></p><p>Freedom, new beginnings, relaxation.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_137' style="display:none;">
+					<h2 class="info"><p><h2>Card 58: Nine of Swords (Reversed)</h2></p><p>Unselfishness, good news, healing.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_138' style="display:none;">
+					<h2 class="info"><p><h2>Card 59: Ten of Swords (Reversed)</h2></p><p>Courage, positive energy, good health.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_139' style="display:none;">
+					<h2 class="info"><p><h2>Card 60: Page of Swords (Reversed)</h2></p><p>Imposture, ill-health, cunningness.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_140' style="display:none;">
+					<h2 class="info"><p><h2>Card 61: Knight of Swords (Reversed)</h2></p><p>Troublemaker, a crafty, tyranny.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_141' style="display:none;">
+					<h2 class="info"><p><h2>Card 62: Queen of Swords (Reversed)</h2></p><p>Sly, keen, deceitful.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_142' style="display:none;">
+					<h2 class="info"><p><h2>Card 63: King of Swords (Reversed)</h2></p><p>Obstinate, evil intentions, judgment.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_143' style="display:none;">
+					<h2 class="info"><p><h2>Card 64: Ace of Pentacles (Reversed)</h2></p><p>Misery, greedy, money.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_144' style="display:none;">
+					<h2 class="info"><p><h2>Card 65: Two of Pentacles (Reversed)</h2></p><p>Difficulty, discouragement.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_145' style="display:none;">
+					<h2 class="info"><p><h2>Card 66: Three of Pentacles (Reversed)</h2></p><p>Preoccupation, ambitions.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_146' style="display:none;">
+					<h2 class="info"><p><h2>Card 67: Four of Pentacles (Reversed)</h2></p><p>Spendthrift, obstacles, earthy possessions.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_147' style="display:none;">
+					<h2 class="info"><p><h2>Card 68: Five of Pentacles (Reversed)</h2></p><p>Employment, courage, revival.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_148' style="display:none;">
+					<h2 class="info"><p><h2>Card 69: Six of Pentacles (Reversed)</h2></p><p>Jealousy, miserliness, unfairness.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_149' style="display:none;">
+					<h2 class="info"><p><h2>Card 70: Seven of Pentacles (Reversed)</h2></p><p>Impatience, slow progress, investments.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_150' style="display:none;">
+					<h2 class="info"><p><h2>Card 71: Eight of Pentacles (Reversed)</h2></p><p>Void, no ambition, dislike.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_151' style="display:none;">
+					<h2 class="info"><p><h2>Card 72: Nine of Pentacles (Reversed)</h2></p><p>Caution, possible loss.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_152' style="display:none;">
+					<h2 class="info"><p><h2>Card 73: Ten of Pentacles (Reversed)</h2></p><p>Dull, slothfulness, misfortune.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_153' style="display:none;">
+					<h2 class="info"><p><h2>Card 74: Page of Pentacles (Reversed)</h2></p><p>Luxury, rebellious, bad news.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_154' style="display:none;">
+					<h2 class="info"><p><h2>Card 75: Knight of Pentacles (Reversed)</h2></p><p>Carelessness, standstill, irresponsible.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_155' style="display:none;">
+					<h2 class="info"><p><h2>Card 76: Queen of Pentacles (Reversed)</h2></p><p>Mistrust, suspicion, neglect.</p></div>
+
+					<div class="width-4-12-m width-4-12" id='card_156' style="display:none;">
+					<h2 class="info"><p><h2>Card 77: King of Pentacles (Reversed)</h2></p><p>ribes, materialistic, calm.</p></div>
+
+					<div class="width-1-12-m width-1-12" id="selectOneCard" style="display:none;"></div>
 
 				</div>
 
 				</div>
-
-				
 
 				<script>
 					//one card reading
@@ -703,10 +599,10 @@ explore page to learn about all cards (make images into links), linked on indivi
   						$("#startB").hide();
   						$("#startC").hide();
   						$("#startD").hide();
-  						$("#startE").hide();
   						$("#selectOneC").show();
   						$("#selectOneCa").show();
-  						$("#selectOneCa").show();
+  						$("#selectOneCar").show();
+  						$("#selectOneCard").show();
 						});
 
 					//three card reading
@@ -716,7 +612,6 @@ explore page to learn about all cards (make images into links), linked on indivi
   						$("#startB").hide();
   						$("#startC").hide();
   						$("#startD").hide();
-  						$("#startE").hide();
   						$("#selectTh").show();
   						$("#selectThA").show();
   						$("#selectThB").show();
@@ -726,13 +621,47 @@ explore page to learn about all cards (make images into links), linked on indivi
   					
 					});
 
-
 					//script to trigger gif on click 
 					function shuffle(imageUrl, div){
     				var image = new Image();
     				image.src = imageUrl;
     				$(div).attr('src', image.src);
   				}
+
+  					//shuffle the cards
+				//	$('#flip').on('click', function() {
+  				//	shuffle('images/card1.gif', '#xxxxx');
+				//	});
+				//	var flipped = false;
+
+					$('#flip1').on('click', function() {
+  					shuffle('images/card1.gif', '#yyy');
+					});
+					var flipped1 = false;
+
+					$('#flip2').on('click', function() {
+  					shuffle('images/card1.gif', '#yyyy');
+					});
+					var flipped2 = false;
+
+					$('#flip3').on('click', function() {
+  					shuffle('images/card1.gif', '#yyyyy');
+					});
+					var flipped3 = false;
+
+					function rotateImage(degree) {
+					$('#xxxxx').animate({  transform: degree }, {
+				    step: function(now,fx) {
+  			    	$(this).css({
+      			      '-webkit-transform':'rotate('+now+'deg)', 
+      			      '-moz-transform':'rotate('+now+'deg)',
+        			   'transform':'rotate('+now+'deg)'
+     				   });
+  					  }
+   					 });
+					}
+
+
 
   					//generate random image
 					var myrandom=Math.round(Math.random()*78);
@@ -741,17 +670,40 @@ explore page to learn about all cards (make images into links), linked on indivi
 
 					var myrandom1=Math.round(Math.random()*78);
 					var card1 = "card_"+myrandom1;
-					var cardImg1 = "images/"+card+'.png';
+					var cardImg1 = "images/"+card1+'.png';
 
 					var myrandom2=Math.round(Math.random()*78);
 					var card2 = "card_"+myrandom2;
-					var cardImg2 = "images/"+card+'.png';
+					var cardImg2 = "images/"+card2+'.png';
+
+					var myrandom3=Math.round(Math.random()*78);
+					var card3 = "card_"+myrandom3;
+					var cardImg3 = "images/"+card3+'.png';
+
 
 					//randomize card orientation
 					var z = document.getElementById('randomCard');
 					if (Math.random() >= 0.5) {
 						z.style.transform="rotate(180deg)";
 						card = "card_"+(myrandom+78);
+
+					}
+					var m = document.getElementById('randomCardA');
+					if (Math.random() >= 0.5) {
+						m.style.transform="rotate(180deg)";
+						card1 = "card_"+(myrandom1+78);
+
+					}
+					var n = document.getElementById('randomCardB');
+					if (Math.random() >= 0.5) {
+						n.style.transform="rotate(180deg)";
+						card2 = "card_"+(myrandom2+78);
+
+					}
+					var o = document.getElementById('randomCardC');
+					if (Math.random() >= 0.5) {
+						o.style.transform="rotate(180deg)";
+						card3 = "card_"+(myrandom3+78);
 
 					}
 
@@ -761,35 +713,18 @@ explore page to learn about all cards (make images into links), linked on indivi
 					htmlImage.src = cardImg;
 					}
 					function displayRandomImage1() {
-					var htmlImage1 = document.getElementById('randomCard');
-					htmlImage.src = cardImg1;
+					var htmlImage1 = document.getElementById('randomCardA');
+					htmlImage1.src = cardImg1;
 					}
 					function displayRandomImage2() {
-					var htmlImage2 = document.getElementById('randomCard');
-					htmlImage.src = cardImg2;
+					var htmlImage2 = document.getElementById('randomCardB');
+					htmlImage2.src = cardImg2;
 					}
 
-					//shuffle the cards
-					$('#flip').on('click', function() {
-  					shuffle('images/card1.gif', '#xxxxx');
-					});
-					var flipped = false;
-
-					$('#flip1').on('click', function() {
-  					shuffle('images/card1.gif', '#yyy');
-					});
-					var flipped = false;
-
-					$('#flip2').on('click', function() {
-  					shuffle('images/card1.gif', '#yyyy');
-					});
-					var flipped = false;
-
-					$('#flip3').on('click', function() {
-  					shuffle('images/card1.gif', '#yyyyy');
-					});
-					var flipped = false;
-
+					function displayRandomImage3() {
+					var htmlImage3 = document.getElementById('randomCardC');
+					htmlImage3.src = cardImg3;
+					}
 
 					//click to reveal card
 					
@@ -802,56 +737,56 @@ explore page to learn about all cards (make images into links), linked on indivi
 					displayRandomImage();});
 					var x = document.getElementById(card);
   					if (window.getComputedStyle(x).display === "none") {
-					  $("#info").hide(1000);
+					  $("#selectOneCa").hide();
 					  $('#flip').hide();
-   						$(x).show(2000);
+   						$(x).show(500);
 					  flipped = true; }
 					}
 					}); 
 
 					//three card
 					$(".reverseA").click(function(){
-						if (!flipped) {
+						if (!flipped1) {
 					  $(this).find(".cardA").toggleClass("flipped");
 					  $("#yyy").hide("fast",function(){
 					  $("#randomCardA").show(); 
-					displayRandomImage();});
-					var a = document.getElementById(card);
+					displayRandomImage1();});
+					var a = document.getElementById(card1);
   					if (window.getComputedStyle(a).display === "none") {
 					  $("#info1").hide(1000);
 					  $('#flip1').hide();
    						$(a).show(2000);
-					  flipped = true; }
+					  flipped1 = true; }
 					  }
 					});
 
-					  $(".reverseB").click(function(){
-						if (!flipped) {
+					 $(".reverseB").click(function(){
+						if (!flipped2) {
 					  $(this).find(".cardB").toggleClass("flipped");
 					  $("#yyyy").hide("fast",function(){
 					  $("#randomCardB").show(); 
-					displayRandomImage1();});
-					var b = document.getElementById(card1);
+					displayRandomImage2();});
+					var b = document.getElementById(card2);
   					if (window.getComputedStyle(b).display === "none") {
 					  $("#info2").hide(1000);
 					  $('#flip2').hide();
    						$(b).show(2000);
-					  flipped = true; }
+					  flipped2 = true; }
 					  }
 					});
 
-					  $(".reverseC").click(function(){
-						if (!flipped) {
+					$(".reverseC").click(function(){
+						if (!flipped3) {
 					  $(this).find(".cardC").toggleClass("flipped");
 					  $("#yyyyy").hide("fast",function(){
 					  $("#randomCardC").show(); 
-					displayRandomImage2();});
-					var c = document.getElementById(card2);
+					displayRandomImage3();});
+					var c = document.getElementById(card3);
   					if (window.getComputedStyle(c).display === "none") {
 					  $("#info3").hide(1000);
 					  $('#flip3').hide();
    						$(c).show(2000);
-					  flipped = true; }
+					  flipped3 = true; }
 					  }
 					});
 					
@@ -883,13 +818,7 @@ explore page to learn about all cards (make images into links), linked on indivi
 				//	});
 
 
-
-
 				</script>
-
-
-			</div>
-		</div>
 
 		<div id="footer">
 			<p>©2020 Lucy Wong | Tarot info from<a href="https://astrologybay.com/tarot-card-meanings-list" style="background-color:transparent">Astrology Bay</a></p>
