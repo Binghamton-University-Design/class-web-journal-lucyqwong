@@ -43,7 +43,7 @@
 }
 
 .nice-rect {
-  width: 70%;
+  width: 90%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -85,6 +85,13 @@
 .info {
   text-align: left;
   color: black;
+}
+
+.infoC {
+  text-align: left;
+  color: black;
+  border: 5px solid black;
+  background-color: #34113F;
 }
 
 .body {

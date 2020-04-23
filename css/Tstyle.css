@@ -47,7 +47,25 @@ font-family: 'EB Garamond', serif;
 #masthead {
     background-color: #EDC5DD;
     padding: 1em;
-    text-align: right;
+    text-align: left;
+    overflow: hidden;
+}
+
+#masthead a{
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+#masthead a:hover{
+  color: #34113F;
+  cursor: pointer;
+}
+
+#masthead a.active{
+  color: #34113F;
 }
 
 .aside-holder .box p:last-child {
@@ -269,7 +287,8 @@ a:visited {
 
 /*
 .overlay #close {
-  font-family: 'Josefin Sans', ;
+  font-family: '
+  fin Sans', ;
   background: var(--body-color);
   border-radius: 1em;
   -moz-border-radius: 1em;
