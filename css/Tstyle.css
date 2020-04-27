@@ -44,30 +44,6 @@ font-family: 'EB Garamond', serif;
   margin-top: 0;
 }
 
-#masthead {
-    background-color: #EDC5DD;
-    padding: 1em;
-    text-align: left;
-    overflow: hidden;
-}
-
-#masthead a{
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-}
-
-#masthead a:hover{
-  color: #34113F;
-  cursor: pointer;
-}
-
-#masthead a.active{
-  color: #34113F;
-}
-
 .aside-holder .box p:last-child {
     padding-bottom: 1.6em;
     border-bottom: .75em solid var(--body-color);
@@ -98,20 +74,6 @@ h3 {
 }
 h4 {
   font-size: 1.125em;
-}
-
-#masthead h4 {
-    margin: 0;
-    font-weight: 300;
-}
-
-#masthead h4 a {
-    color: #34113F;
-    background-color: var(--body-color); 
-}
-
-#masthead h4 a:hover {
-    color: #34113F;
 }
 
 #aside h2 {
@@ -362,26 +324,22 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #EDC5DD;
 }
 
 li {
-  float: right;
+  float: left;
 }
 
 li a {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: #34113f;
-}
-
-.button {
-  background-color: #EDC5DD;
-  padding: 15px 32px;
+  background-color: #34113F;
+  color: white;
 }

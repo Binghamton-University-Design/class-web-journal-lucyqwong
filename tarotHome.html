@@ -13,16 +13,47 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <!--font is from google fonts-->
 		<script src="js/main.js"></script>
 		<link rel="icon" href="images/favicon.png" type="image/x-icon" sizes="16x16">
+<style>
+	ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #EDC5DD;
+}
 
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #34113F;
+  color: white;
+}
+
+.active{
+	background-color: #f2d8e8;
+	color: white;
+}
+</style>
 	</head>
 
 	<body>
 
-		<div id="masthead" id="masthead">
-				
-				<a class="active" href="tarotHome.html">Home</a>
-				<a href="tarotAllReverse.html">Explore</a>
-			
+		<div>
+			<ul>
+				<li><a class="active" href="tarotHome.html">Home</a></li>
+				<li><a href="tarotAllReverse.html">Explore</a></li>
+				<li style="float:right"><a href="lucyqwong.com">created by Lucy Wong</a></li>
+			</ul>
 		</div>
 
 		<div class="wrapper">
@@ -57,6 +88,7 @@
 					<button class="button" id="threeC" style="display:block;">Three card reading</button></div>
 				</div>
 
+
 				<div class="width-1-12-m width-1-12" id="startD" style="display:block;"></div>
 				
 				<div class="width-6-12-m width-6-12" id="selectOneC" style="display:none;">
@@ -86,7 +118,7 @@
 						</div>
 					</div>
 
-					<div class="fade-in"><p class="info" id="info1">Hover over the pile to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p>
+					<div class="fade-in"><p class="info" id="info1">Press the <i>Shuffle</i> button below to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p><button class="button" id="b1" style="display:block;" onClick="ani1()">Shuffle</button>
 					</div>
 				</div>
 
@@ -101,7 +133,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="fade-in"><p class="info" id="info2">Hover over the pile to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p>
+					<div class="fade-in"><p class="info" id="info2">Press the <i>Shuffle</i> button below to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p><button class="button" id="b2" style="display:block;" onClick="ani2()">Shuffle</button>
 					</div>
 				</div>
 
@@ -116,12 +148,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="fade-in"><p class="info" id="info3">Hover over the pile to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p>
+					<div class="fade-in"><p class="info" id="info3">Press the <i>Shuffle</i> button below to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p><button class="button" id="b3" style="display:block;" onClick="ani3()">Shuffle</button>
 					</div>
 				</div>
 
 					<div class="width-4-12-m width-4-12" id="selectOneCa" style="display:none;">
-					<p>Hover over the pile to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p></div>
+					<p>Press the <i>Shuffle</i> button below to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p><button class="button" style="display:block;" onClick="ani()">Shuffle</button></div>
 
 					<div class="width-4-12-m width-4-12" id='card_1' style="display:none;">
 					<h2 class="info"><p><h2>Card 0: The Fool</h2></p><p>Beginnings, possibilities, pleasure, thoughtlessness, adventure, opportunity.</p></div>
@@ -392,7 +424,7 @@
 					<h2 class="info"><p><h2>Card 10: The Wheel of Fortune (Reversed)</h2></p><p>Interruption, outside influences, failure, bad luck.</p></div>
 
 					<div class="width-4-12-m width-4-12" id='card_90' style="display:none;">
-					<h2 class="info"><p><h2>Card 11: Justice (Reversed)</h2></p><p>False accusation, unfairness, abuse, biased.</p></div>
+					<h2 class="info"><p><h2>Card 11: Justice (Reversed)</h2></p><p>False accusation, unfairness, abuse, bias.</p></div>
 
 					<div class="width-4-12-m width-4-12" id='card_91' style="display:none;">
 					<h2 class="info"><p><h2>Card 12: The Hanged Man (Reversed)</h2></p><p>False prophecy, useless sacrifice, unwillingness.</p></div>
@@ -599,7 +631,7 @@
 				</div>
 
 				<script>
-					//one card reading
+					//one card reading setup
 					$('#oneC').on('click', function() {
   						$("#start").hide();
   						$("#startA").hide();
@@ -612,7 +644,7 @@
   						$("#selectOneCard").show();
 						});
 
-					//three card reading
+					//three card reading setup
 					$('#threeC').on('click', function() {
 						$("#start").hide();
   						$("#startA").hide();
@@ -620,8 +652,7 @@
   						$("#startC").hide();
   						$("#startD").hide();
   						$("#3c").show();
-  						
-  						//display selection from dropdown
+  						//display option from dropdown
   					var e = document.getElementById("scenarios");
 					var text = e.options[e.selectedIndex].text;
 					document.getElementById("selected").innerHTML = text;
@@ -633,35 +664,39 @@
   						$("#selectThE").show();
   						});
 
-					//script to trigger gif on click 
-					function shuffle(imageUrl, div){
-    				var image = new Image();
-    				image.src = imageUrl;
-    				$(div).attr('src', image.src);
-  				}
+					//shuffle button for all
+  				function revert(){
+  					document.getElementById('xxxxx').className ='nice-image';}
+  				function ani(){
+    			document.getElementById('xxxxx').className ='nice-imageS';
+ 				setTimeout(revert,500);
+    		}
 
-  					//shuffle the cards
-				//	$('#flip').on('click', function() {
-  				//	shuffle('images/card1.gif', '#xxxxx');
-				//	});
+    			function revert1(){
+  					document.getElementById('yyy').className ='nice-image';}
+  				function ani1(){
+    			document.getElementById('yyy').className ='nice-imageS';
+ 				setTimeout(revert1,500);
+    		}
+
+    			function revert2(){
+  					document.getElementById('yyyy').className ='nice-image';}
+  				function ani2(){
+    			document.getElementById('yyyy').className ='nice-imageS';
+ 				setTimeout(revert2,500);
+    		}
+
+    			function revert3(){
+  					document.getElementById('yyyyy').className ='nice-image';}
+  				function ani3(){
+    			document.getElementById('yyyyy').className ='nice-imageS';
+ 				setTimeout(revert3,500);
+    		}
+
 					var flipped = false;
-
-				//	$('#flip1').on('click', function() {
-  				//	shuffle('images/card1.gif', '#yyy');
-				//	});
 					var flipped1 = false;
-//
-//					$('#flip2').on('click', function() {
-  //					shuffle('images/card1.gif', '#yyyy');
-//					});
 					var flipped2 = false;
-//
-//					$('#flip3').on('click', function() {
-  //					shuffle('images/card1.gif', '#yyyyy');
-	//				});
 					var flipped3 = false;
-
-
 
   					//generate random image
 					var myrandom=Math.round(Math.random()*78);
@@ -720,7 +755,6 @@
 					var htmlImage2 = document.getElementById('randomCardB');
 					htmlImage2.src = cardImg2;
 					}
-
 					function displayRandomImage3() {
 					var htmlImage3 = document.getElementById('randomCardC');
 					htmlImage3.src = cardImg3;
@@ -754,6 +788,7 @@
 					var a = document.getElementById(card1);
   				//	if (window.getComputedStyle(a).display === "none") {
 					  $("#info1").hide(1000);
+					  $('#b1').hide();
 					  $('#flip1').hide();
    						$(a).show(2000);
 					  flipped1 = true; 
@@ -769,6 +804,7 @@
 					var b = document.getElementById(card2);
   				//	if (window.getComputedStyle(b).display === "none") {
 					  $("#info2").hide(1000);
+					  $('#b2').hide();
 					  $('#flip2').hide();
    						$(b).show(2000);
 					  flipped2 = true; 
@@ -784,6 +820,7 @@
 					var c = document.getElementById(card3);
   				//	if (window.getComputedStyle(c).display === "none") {
 					  $("#info3").hide(1000);
+					  $('#b3').hide();
 					  $('#flip3').hide();
    						$(c).show(2000);
 					  flipped3 = true; 
