@@ -91,9 +91,9 @@ li a:hover {
 
 				<div class="width-1-12-m width-1-12" id="startD" style="display:block;"></div>
 				
-				<div class="width-6-12-m width-6-12" id="selectOneC" style="display:none;">
+				<div class="width-12-12-m width-12-12" id="selectOneC" style="display:none;">
 					<div class = "reverse">
-						<div class = "card" id="box1">
+						<div class = "card">
 							<div class = "front">
 								<img id="xxxxx" class="nice-image" style="display:block;" src="images/card 1.png">
 							</div>
@@ -101,6 +101,11 @@ li a:hover {
 								 <img class="nice-rect" id="randomCard" style="display:none;" alt="Try again :("/>
 							</div>
 						</div>
+					</div>
+					<div class="fade-in"><p class="info" id="info">Press the <i>Shuffle</i> button below to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p>
+					<div class="center">
+						<button class="button" style="display:block;" onClick="ani()">Shuffle</button>
+					</div>
 					</div>
 				</div>	
 
@@ -151,9 +156,6 @@ li a:hover {
 					<div class="fade-in"><p class="info" id="info3">Press the <i>Shuffle</i> button below to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p><button class="button" id="b3" style="display:block;" onClick="ani3()">Shuffle</button>
 					</div>
 				</div>
-
-					<div class="width-4-12-m width-4-12" id="selectOneCa" style="display:none;">
-					<p>Press the <i>Shuffle</i> button below to shuffle the cards. Repeat as many times as you like, and when you're ready, select the pile to flip the card over.</p><button class="button" style="display:block;" onClick="ani()">Shuffle</button></div>
 
 					<div class="width-4-12-m width-4-12" id='card_1' style="display:none;">
 					<h2 class="info"><p><h2>Card 0: The Fool</h2></p><p>Beginnings, possibilities, pleasure, thoughtlessness, adventure, opportunity.</p></div>
@@ -624,8 +626,6 @@ li a:hover {
 					<div class="width-4-12-m width-4-12" id='card_156' style="display:none;">
 					<h2 class="info"><p><h2>Card 77: King of Pentacles (Reversed)</h2></p><p>ribes, materialistic, calm.</p></div>
 
-					<div class="width-1-12-m width-1-12" id="selectOneCard" style="display:none;"></div>
-
 					<div class="width-12-12-m width-12-12"></div>
 
 				</div>
@@ -643,7 +643,6 @@ li a:hover {
   						$("#selectOneC").show();
   						$("#selectOneCa").show();
   						$("#selectOneCar").show();
-  						$("#selectOneCard").show();
 						});
 
 					//three card reading setup
@@ -769,10 +768,13 @@ li a:hover {
 						if (!flipped) {
 					  $(this).find(".card").toggleClass("flipped");
 					  $("#xxxxx").hide("fast",function(){
+    				document.getElementById('randomCard').className ='width-12-12-m width--12';
 					  $("#randomCard").show(); 
 					displayRandomImage();});
 					var x = document.getElementById(card);
   					if (window.getComputedStyle(x).display === "none") {
+  						$("#info").hide(1000);
+  						$(".center").hide(1000);
 					  $("#selectOneCa").hide();
 					  $('#flip').hide();
    						$(x).show(500);
