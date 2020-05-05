@@ -179,18 +179,17 @@
   font-family: 'EB Garamond', serif;
 }
 
+.button:hover {
+  background-color: #34113F;
+  color: white;
+  cursor: pointer;
+}
+
 .center {
     display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
-}
-}
-
-.button:hover {
-  background-color: #34113F;
-  color: white;
-  cursor: pointer;
 }
 
 .reverse {
@@ -203,6 +202,7 @@
    position: relative;
    margin: 50px auto;
 }
+
 .reverse .card.flipped {
   transform:rotatey(-180deg);
   -ms-transform:rotatey(-180deg); /* IE 9 */
