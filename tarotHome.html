@@ -830,6 +830,32 @@ li a:hover {
 					  flipped3 = true; 
 					  }
 					});
+
+									//ordering: 1 2 3 | 3 2 1 | 2 1 3 | 1 3 2 | 3 1 2 | 2 3 1
+            if (flipped1 === true && flipped2 === true && flipped3 === true) {
+            	var a = document.getElementById(card1);
+            	var b = document.getElementById(card2);
+            	var c = document.getElementById(card3);
+              var p1 = card1.slice(5);
+              var p2 = card2.slice(5);
+              var p3 = card3.slice(5);
+              if(p1 < p2 && p2 < p3) // 1 2 3 
+              { }
+              else if (p1 > p2 && p2 < p3) // 2 1 3
+                  {$(b).insertBefore( $(a) );}
+                  else if (p1 < p2 && p2 > p3) // 1 3 2
+                    { $(c).insertBefore( $(b) );}
+                    else if (p1 > p2 && p2 > p3) // 3 2 1
+                      {   $(b).insertBefore( $(a) );
+                        $(c).insertBefore( $(b) );}
+                      else if (p1 > p2 && p2 < p3) // 3 1 2
+                        { $(c).insertBefore( $(a) );}
+                        else // 2 3 1
+                          {   $(c).insertBefore( $(b) );
+                            $(b).insertBefore( $(c) );}
+                }
+
+
 					
 
 				//	$('#flip').on('click', function() {
